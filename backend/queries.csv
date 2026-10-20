@@ -1,0 +1,501 @@
+query,category,complexity,model
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+What is the capital of France?,factual,LOW,SMALL
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Who wrote 1984?,factual,LOW,SMALL
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+What is the capital of Japan?,factual,LOW,SMALL
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Who wrote Moby Dick?,factual,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the capital of Italy?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+What is the capital of Germany?,factual,LOW,SMALL
+What is the capital of Japan?,factual,LOW,SMALL
+Who wrote The Great Gatsby?,factual,LOW,SMALL
+Who wrote Hamlet?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+What is the boiling point of water?,factual,LOW,SMALL
+Who wrote 1984?,factual,LOW,SMALL
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the capital of Canada?,factual,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Write a python script to reverse a string.,coding,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+What is the capital of Italy?,factual,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the capital of Germany?,factual,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+What is the capital of Brazil?,factual,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+What is the capital of Canada?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+What is the capital of Spain?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+What is the capital of Brazil?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+Who wrote The Great Gatsby?,factual,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Write a python script to reverse a string.,coding,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+What is the capital of Japan?,factual,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+What is the capital of Japan?,factual,LOW,SMALL
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Write a python script to reverse a string.,coding,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Who wrote 1984?,factual,LOW,SMALL
+Who wrote 1984?,factual,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Who wrote The Great Gatsby?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the boiling point of water?,factual,LOW,SMALL
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the boiling point of water?,factual,LOW,SMALL
+Who wrote The Great Gatsby?,factual,LOW,SMALL
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the capital of Germany?,factual,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+What is the boiling point of water?,factual,LOW,SMALL
+What is the capital of Italy?,factual,LOW,SMALL
+What is the capital of France?,factual,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+What is the capital of Japan?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+What is the boiling point of water?,factual,LOW,SMALL
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Who wrote Moby Dick?,factual,LOW,SMALL
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+What is the capital of Italy?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the capital of Spain?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+What is the capital of France?,factual,LOW,SMALL
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+What is the capital of Italy?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Write a python script to reverse a string.,coding,LOW,SMALL
+Who wrote 1984?,factual,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+Who wrote Moby Dick?,factual,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Who wrote Hamlet?,factual,LOW,SMALL
+What is the capital of Italy?,factual,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Who wrote 1984?,factual,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+What is the capital of Canada?,factual,LOW,SMALL
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the capital of Canada?,factual,LOW,SMALL
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+Who wrote 1984?,factual,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Who wrote Hamlet?,factual,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+Who wrote Moby Dick?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+What is the capital of Canada?,factual,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+What is the capital of Canada?,factual,LOW,SMALL
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Who wrote Hamlet?,factual,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Who wrote 1984?,factual,LOW,SMALL
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Who wrote Moby Dick?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+What is the capital of Italy?,factual,LOW,SMALL
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the capital of Brazil?,factual,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Explain the difference between HTTP and HTTPS.,general_knowledge,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Who wrote The Great Gatsby?,factual,LOW,SMALL
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Who wrote The Great Gatsby?,factual,LOW,SMALL
+What is the capital of Germany?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+What is the capital of Japan?,factual,LOW,SMALL
+Who wrote Hamlet?,factual,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Who wrote Hamlet?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+What is the capital of Brazil?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+What is the capital of Japan?,factual,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Who wrote Moby Dick?,factual,LOW,SMALL
+Who wrote Hamlet?,factual,LOW,SMALL
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+What is the capital of Brazil?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Explain the difference between TCP and UDP.,general_knowledge,MODERATE,MEDIUM
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Who wrote 1984?,factual,LOW,SMALL
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+What is the capital of Germany?,factual,LOW,SMALL
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+Write a python script to reverse a string.,coding,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+How does a microwave work?,general_knowledge,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Who wrote Hamlet?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Write a python script to reverse a string.,coding,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+What is the capital of Italy?,factual,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Explain the difference between RAM and ROM.,general_knowledge,MODERATE,MEDIUM
+Who wrote Hamlet?,factual,LOW,SMALL
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Write a python script to reverse a string.,coding,LOW,SMALL
+What is the boiling point of water?,factual,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+How does a solar panel work?,general_knowledge,MODERATE,MEDIUM
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+What is the capital of Germany?,factual,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Prove that P=NP is in NP-hard.,mathematics,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Who wrote The Great Gatsby?,factual,LOW,SMALL
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Explain the difference between DNA and RNA.,general_knowledge,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+Who wrote Moby Dick?,factual,LOW,SMALL
+Write a python script to reverse a string.,coding,LOW,SMALL
+What is the capital of Brazil?,factual,LOW,SMALL
+What is the capital of France?,factual,LOW,SMALL
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Who wrote Hamlet?,factual,LOW,SMALL
+What is the capital of Spain?,factual,LOW,SMALL
+Who wrote Pride and Prejudice?,factual,LOW,SMALL
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs.",analytical_reasoning,HIGH,LARGE
+Design a real-time fraud detection pipeline handling 10M transactions/day.,analytical_reasoning,HIGH,LARGE
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+"First, list the primary causes of the French Revolution. Then, evaluate how these causes align with modern political unrest. Finally, synthesize a framework for predicting future revolutions.",multi_step_reasoning,HIGH,LARGE
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+How does a car engine work?,general_knowledge,MODERATE,MEDIUM
+How does a refrigerator work?,general_knowledge,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+What is the derivative of x^2 + 3x?,mathematics,MODERATE,MEDIUM
+Design a distributed rate limiter using Redis and Go.,coding,HIGH,LARGE
+Debug this python error: IndexError: list index out of range,debugging,MODERATE,MEDIUM
+Implement a binary search tree in Java.,coding,MODERATE,MEDIUM
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL

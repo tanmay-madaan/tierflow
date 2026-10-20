@@ -1,0 +1,172 @@
+{
+  "run_id": "test_resumable_run",
+  "generated_at": "2026-10-12T17:17:02.939872+00:00",
+  "execution_mode": "demo",
+  "dataset_version": "1.0.0",
+  "dataset_manifest": {
+    "version": "1.0.0",
+    "filepath": "C:\\Users\\Tanmay Madaan\\OneDrive\\Desktop\\AI4R\\adaptive-llm-router\\backend\\benchmarks\\data\\benchmark_v1.json",
+    "sha256": "8fc11cd7b04f1b57ed70d365d6a7b698d740925caa9af74c92c864d4fddea198",
+    "total_items": 50,
+    "category_counts": {
+      "factual": 10,
+      "reasoning": 10,
+      "mathematics": 10,
+      "coding": 10,
+      "summarization": 10
+    },
+    "categories": [
+      "coding",
+      "factual",
+      "mathematics",
+      "reasoning",
+      "summarization"
+    ]
+  },
+  "total_prompts": 4,
+  "policies_evaluated": [
+    "ALWAYS_LARGE",
+    "ADAPTIVE_ML",
+    "RULE_BASED"
+  ],
+  "generation_settings": {
+    "temperature": 0.0,
+    "max_tokens": 512
+  },
+  "summary_metrics": {
+    "ALWAYS_LARGE": {
+      "total_requests": 4,
+      "successful_requests": 4,
+      "failed_requests": 0,
+      "failure_rate_pct": 0.0,
+      "mean_latency_s": 2.5942,
+      "median_latency_s": 2.5571,
+      "p95_latency_s": 3.426,
+      "mean_quality_score": 10.0,
+      "std_quality_score": 0.0,
+      "mean_cost_usd": 0.00053,
+      "total_cost_usd": 0.00212,
+      "total_tokens": 170,
+      "model_distribution_pct": {
+        "LARGE": 100.0
+      }
+    },
+    "ADAPTIVE_ML": {
+      "total_requests": 4,
+      "successful_requests": 4,
+      "failed_requests": 0,
+      "failure_rate_pct": 0.0,
+      "mean_latency_s": 0.1936,
+      "median_latency_s": 0.1892,
+      "p95_latency_s": 0.2744,
+      "mean_quality_score": 10.0,
+      "std_quality_score": 0.0,
+      "mean_cost_usd": 9.7e-06,
+      "total_cost_usd": 3.89e-05,
+      "total_tokens": 97,
+      "model_distribution_pct": {
+        "SMALL": 100.0
+      }
+    },
+    "RULE_BASED": {
+      "total_requests": 4,
+      "successful_requests": 4,
+      "failed_requests": 0,
+      "failure_rate_pct": 0.0,
+      "mean_latency_s": 0.2991,
+      "median_latency_s": 0.2191,
+      "p95_latency_s": 0.5225,
+      "mean_quality_score": 7.5,
+      "std_quality_score": 4.33,
+      "mean_cost_usd": 8.95e-05,
+      "total_cost_usd": 0.0003581,
+      "total_tokens": 112,
+      "model_distribution_pct": {
+        "SMALL": 75.0,
+        "MEDIUM": 25.0
+      }
+    }
+  },
+  "comparisons_vs_always_large": {
+    "ADAPTIVE_ML": {
+      "quality_retention_pct": 100.0,
+      "cost_reduction_pct": 98.17,
+      "latency_reduction_pct": 92.54,
+      "paired_sample_size": 4,
+      "latency_diff_ci_95": {
+        "mean_diff": -2.4006,
+        "ci_lower": -3.12765,
+        "ci_upper": -1.67355,
+        "p_value": 0.011305
+      },
+      "cost_diff_ci_95": {
+        "mean_diff": -0.00052,
+        "ci_lower": -0.000607,
+        "ci_upper": -0.000439,
+        "p_value": 0.002208
+      },
+      "quality_diff_ci_95": {
+        "mean_diff": 0.0,
+        "ci_lower": 0.0,
+        "ci_upper": 0.0,
+        "p_value": 1.0
+      }
+    },
+    "RULE_BASED": {
+      "quality_retention_pct": 75.0,
+      "cost_reduction_pct": 83.11,
+      "latency_reduction_pct": 88.47,
+      "paired_sample_size": 4,
+      "latency_diff_ci_95": {
+        "mean_diff": -2.29505,
+        "ci_lower": -3.0957,
+        "ci_upper": -1.4944,
+        "p_value": 0.016455
+      },
+      "cost_diff_ci_95": {
+        "mean_diff": -0.00044,
+        "ci_lower": -0.000595,
+        "ci_upper": -0.000288,
+        "p_value": 0.014971
+      },
+      "quality_diff_ci_95": {
+        "mean_diff": -2.5,
+        "ci_lower": -7.5,
+        "ci_upper": 0.0,
+        "p_value": 0.391002
+      }
+    }
+  },
+  "category_breakdown": {
+    "factual": {
+      "ALWAYS_LARGE": {
+        "count": 4,
+        "mean_latency_s": 2.5942,
+        "mean_cost_usd": 0.00053,
+        "mean_quality_score": 10.0,
+        "models_selected": {
+          "LARGE": 4
+        }
+      },
+      "ADAPTIVE_ML": {
+        "count": 4,
+        "mean_latency_s": 0.1936,
+        "mean_cost_usd": 9.7e-06,
+        "mean_quality_score": 10.0,
+        "models_selected": {
+          "SMALL": 4
+        }
+      },
+      "RULE_BASED": {
+        "count": 4,
+        "mean_latency_s": 0.2991,
+        "mean_cost_usd": 8.95e-05,
+        "mean_quality_score": 7.5,
+        "models_selected": {
+          "SMALL": 3,
+          "MEDIUM": 1
+        }
+      }
+    }
+  }
+}

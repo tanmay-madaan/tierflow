@@ -1,0 +1,10 @@
+run_id,prompt_id,category,policy,selected_model,model_id,latency,prompt_tokens,completion_tokens,cost,quality_score,eval_details,error
+bench_20261012_224356,fact_01,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,2.0099,11,42,0.000685,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference 'Mariana Trench'.",
+bench_20261012_224356,fact_01,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.1875,11,13,9.45e-06,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference 'Mariana Trench'.",
+bench_20261012_224356,fact_01,factual,RULE_BASED,SMALL,demo-small-simulated,0.2263,11,13,9.45e-06,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference 'Mariana Trench'.",
+bench_20261012_224356,fact_02,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,2.9054,16,42,0.00071,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference '1969'.",
+bench_20261012_224356,fact_02,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2365,16,13,1.02e-05,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference '1969'.",
+bench_20261012_224356,fact_02,factual,RULE_BASED,MEDIUM,demo-medium-simulated,1.1683,16,29,0.00033,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference '1969'.",
+bench_20261012_224356,fact_03,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,3.229,10,42,0.00068,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference 'Wellington'.",
+bench_20261012_224356,fact_03,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2568,10,5,4.5e-06,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference 'Wellington'.",
+bench_20261012_224356,fact_03,factual,RULE_BASED,SMALL,demo-small-simulated,0.2897,10,5,4.5e-06,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference 'Wellington'.",

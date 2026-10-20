@@ -1,0 +1,13 @@
+run_id,prompt_id,category,policy,selected_model,model_id,latency,prompt_tokens,completion_tokens,cost,quality_score,eval_details,error
+run_c5f20a39,fact_01,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,1.392,11,41,0.00021875,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+run_c5f20a39,fact_01,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2194,11,23,3.86e-06,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+run_c5f20a39,fact_01,factual,RULE_BASED,SMALL,demo-small-simulated,0.1718,11,23,3.86e-06,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+run_c5f20a39,fact_02,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,2.4353,16,32,0.00018,10.0,Target reference '1969' or accepted alias identified in response.,
+run_c5f20a39,fact_02,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.1727,16,14,2.7e-06,10.0,Target reference '1969' or accepted alias identified in response.,
+run_c5f20a39,fact_02,factual,RULE_BASED,MEDIUM,demo-medium-simulated,0.4053,16,29,9.9e-06,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference '1969'.",
+run_c5f20a39,fact_03,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,1.2868,10,28,0.0001525,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+run_c5f20a39,fact_03,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.3249,10,10,1.88e-06,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+run_c5f20a39,fact_03,factual,RULE_BASED,SMALL,demo-small-simulated,0.3371,10,10,1.88e-06,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+run_c5f20a39,fact_04,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,1.5351,6,26,0.0001375,10.0,Target reference 'Alexander Fleming' or accepted alias identified in response.,
+run_c5f20a39,fact_04,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.3607,6,7,1.27e-06,10.0,Target reference 'Alexander Fleming' or accepted alias identified in response.,
+run_c5f20a39,fact_04,factual,RULE_BASED,SMALL,demo-small-simulated,0.2686,6,7,1.27e-06,10.0,Target reference 'Alexander Fleming' or accepted alias identified in response.,

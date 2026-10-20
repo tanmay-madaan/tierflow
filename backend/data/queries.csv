@@ -1,0 +1,326 @@
+query,category,complexity,model
+What is an IP address?,general_knowledge,LOW,SMALL
+Explain the main features of React and why it became popular.,summarization,MODERATE,MEDIUM
+"Compare microservices and monolithic architectures for a healthcare platform handling sensitive patient data. Analyze security, compliance, scalability, and development velocity.",analytical_reasoning,HIGH,LARGE
+Why is my React component re-rendering infinitely?,debugging,MODERATE,MEDIUM
+Design a multi-region database replication strategy. First analyze the consistency requirements. Then propose a replication topology. Finally design the conflict resolution mechanism.,multi_step_reasoning,HIGH,LARGE
+My Python script is using too much memory. How do I profile it?,debugging,MODERATE,MEDIUM
+"Architect a global content delivery network from scratch. Cover edge caching, origin shield, request routing, SSL termination, DDoS protection, analytics, and purge mechanisms.",long_context_reasoning,HIGH,LARGE
+Define 'encryption'.,general_knowledge,LOW,SMALL
+How does a neural network learn through backpropagation?,general_knowledge,MODERATE,MEDIUM
+Who discovered penicillin?,factual,LOW,SMALL
+Define the term 'blockchain'.,general_knowledge,LOW,SMALL
+What planet is known as the Red Planet?,factual,LOW,SMALL
+Summarize the purpose of unit testing.,summarization,LOW,SMALL
+Who invented the light bulb?,factual,LOW,SMALL
+Who is the author of Harry Potter?,factual,LOW,SMALL
+What is Bitcoin?,general_knowledge,LOW,SMALL
+What is the main ingredient in bread?,factual,LOW,SMALL
+Explain the key concepts behind Kubernetes.,summarization,MODERATE,MEDIUM
+What is TCP/IP?,general_knowledge,LOW,SMALL
+Analyze the implications of the EU AI Act on enterprise AI development and deployment. Propose a compliance framework for a technology company.,analytical_reasoning,HIGH,LARGE
+"Walk through the process of migrating a monolithic application to microservices. Cover domain decomposition, data migration, API design, and the strangler fig pattern.",multi_step_reasoning,HIGH,LARGE
+Write a function to flatten a nested list.,coding,MODERATE,MEDIUM
+Solve the halting problem.,mathematics,HIGH,LARGE
+What is cloud computing in simple terms?,summarization,LOW,SMALL
+What is the main idea of the book 1984?,summarization,LOW,SMALL
+What is the difference between RAM and ROM?,general_knowledge,LOW,SMALL
+What is a variable in programming?,general_knowledge,LOW,SMALL
+Write a Hello World program in JavaScript.,coding,LOW,SMALL
+Explain the publish-subscribe messaging pattern.,general_knowledge,MODERATE,MEDIUM
+Who invented the telephone?,factual,LOW,SMALL
+What is the largest desert in the world?,factual,LOW,SMALL
+What is a primary key in a database?,general_knowledge,LOW,SMALL
+"Design a data pipeline that ingests streaming data from IoT devices, processes it in real-time, stores it for batch analysis, and serves dashboards. Address each component sequentially.",multi_step_reasoning,HIGH,LARGE
+"Design and implement a complete rate limiter that supports sliding window, token bucket, and leaky bucket algorithms. Include thread safety and distributed support.",coding,HIGH,LARGE
+Why is my Python asyncio code blocking?,debugging,MODERATE,MEDIUM
+Why is caching important in web applications?,simple_reasoning,MODERATE,MEDIUM
+What is the capital of France?,factual,LOW,SMALL
+How do I fix flaky tests in my CI pipeline?,debugging,MODERATE,MEDIUM
+What is the difference between symmetric and asymmetric encryption?,general_knowledge,MODERATE,MEDIUM
+What is the difference between HTTP GET and POST?,general_knowledge,LOW,SMALL
+"Design a concurrent web crawler that respects robots.txt, handles rate limiting, avoids duplicate URLs, and manages a priority queue. Explain the architecture.",coding,HIGH,LARGE
+"Design a comprehensive disaster recovery plan for a cloud-native application. Cover RPO/RTO requirements, multi-region failover, data backup strategies, runbook automation, and testing procedures.",long_context_reasoning,HIGH,LARGE
+How do I fix a 'too many connections' error in MySQL?,debugging,MODERATE,MEDIUM
+Derive general relativity.,mathematics,HIGH,LARGE
+What is the currency of Japan?,factual,LOW,SMALL
+First explain how attention mechanisms work in transformers. Then describe how they enable parallel processing. Finally analyze why transformers outperform RNNs for long sequences.,multi_step_reasoning,HIGH,LARGE
+Explain the concept of matrix multiplication.,mathematics,MODERATE,MEDIUM
+How do you calculate the standard deviation of a dataset?,mathematics,MODERATE,MEDIUM
+What does HTTP stand for?,factual,LOW,SMALL
+What is the capital of Australia?,factual,LOW,SMALL
+What is the difference between a stack and a queue?,simple_reasoning,MODERATE,MEDIUM
+What is a REST API?,general_knowledge,LOW,SMALL
+What is the chemical symbol for gold?,factual,LOW,SMALL
+Name three cloud service providers.,general_knowledge,LOW,SMALL
+Which is faster: a list or a tuple in Python?,simple_reasoning,LOW,SMALL
+What is an API?,general_knowledge,LOW,SMALL
+"Design a comprehensive monitoring and observability stack for a cloud-native application. Explain metrics, logs, traces, and alerting strategies with concrete tool recommendations.",analytical_reasoning,HIGH,LARGE
+What is the derivative of e^x?,mathematics,MODERATE,MEDIUM
+Explain the concept of continuous integration.,summarization,MODERATE,MEDIUM
+Analyze the security implications of quantum computing on current cryptographic systems and propose a migration strategy for a large financial institution.,analytical_reasoning,HIGH,LARGE
+What are the advantages of using TypeScript over JavaScript?,simple_reasoning,MODERATE,MEDIUM
+How does garbage collection work in Java?,general_knowledge,MODERATE,MEDIUM
+What is the difference between stateful and stateless services?,general_knowledge,MODERATE,MEDIUM
+What are the benefits of using Docker for development?,simple_reasoning,MODERATE,MEDIUM
+What is Bayes' theorem and how is it applied?,mathematics,MODERATE,MEDIUM
+What does OOP stand for?,general_knowledge,LOW,SMALL
+Evaluate the environmental impact of cryptocurrency mining and propose sustainable alternatives with technical feasibility analysis.,analytical_reasoning,HIGH,LARGE
+What is the derivative of x^2 + 3x + 5?,mathematics,MODERATE,MEDIUM
+How does React's virtual DOM work?,general_knowledge,MODERATE,MEDIUM
+"Architect a social media platform for 500 million users. Address the news feed algorithm, content moderation, real-time notifications, media storage, and ad serving. Explain the infrastructure choices.",long_context_reasoning,HIGH,LARGE
+Prove that the halting problem is undecidable. Explain the proof by contradiction clearly.,mathematics,HIGH,LARGE
+Could you please define what the acronym API stands for in the context of software development?,general_knowledge,LOW,SMALL
+"You need to build a real-time language translation system. Design the complete architecture covering model serving, language detection, context preservation, domain adaptation, and quality evaluation.",long_context_reasoning,HIGH,LARGE
+Write a function to check if a number is even.,coding,LOW,SMALL
+Explain the Central Limit Theorem.,mathematics,MODERATE,MEDIUM
+When should you use a linked list instead of an array?,simple_reasoning,MODERATE,MEDIUM
+"Design a privacy-preserving machine learning system using federated learning and differential privacy. Explain the mathematical guarantees, communication protocols, and practical challenges.",analytical_reasoning,HIGH,LARGE
+Write a function to merge two sorted arrays.,coding,MODERATE,MEDIUM
+How do I fix a memory leak in a Node.js application?,debugging,MODERATE,MEDIUM
+What does RAM stand for?,general_knowledge,LOW,SMALL
+What are the ACID properties in databases?,general_knowledge,MODERATE,MEDIUM
+How many continents are there?,factual,LOW,SMALL
+Are arrays and lists the same in Python?,simple_reasoning,LOW,SMALL
+Why does gradient descent sometimes fail to converge?,simple_reasoning,MODERATE,MEDIUM
+Why is my CSS grid layout not working as expected?,debugging,MODERATE,MEDIUM
+"First explain how gradient boosting works. Then compare XGBoost, LightGBM, and CatBoost. Finally recommend when to use each and describe hyperparameter tuning strategies.",multi_step_reasoning,HIGH,LARGE
+Is JavaScript the same as Java?,simple_reasoning,LOW,SMALL
+Explain how TCP ensures reliable data delivery.,general_knowledge,MODERATE,MEDIUM
+How does DNS resolution work?,general_knowledge,MODERATE,MEDIUM
+Explain event-driven architecture.,general_knowledge,MODERATE,MEDIUM
+Who was the first president of the United States?,factual,LOW,SMALL
+How to diagnose slow database queries?,debugging,MODERATE,MEDIUM
+Why are GPUs better than CPUs for training neural networks?,simple_reasoning,MODERATE,MEDIUM
+How does logistic regression work mathematically?,mathematics,MODERATE,MEDIUM
+What happens if you divide by zero in Python?,simple_reasoning,LOW,SMALL
+Why is normalization important in machine learning?,simple_reasoning,MODERATE,MEDIUM
+How do you create a list in Python?,coding,LOW,SMALL
+What is the population of China?,factual,LOW,SMALL
+How does a CDN improve website performance?,general_knowledge,MODERATE,MEDIUM
+What is a cookie in web browsing?,general_knowledge,LOW,SMALL
+"Design a machine learning system that can detect deepfake videos. Explain the training pipeline, model architecture, data requirements, and evaluation methodology.",analytical_reasoning,HIGH,LARGE
+Give a one-line summary of the Python programming language.,summarization,LOW,SMALL
+What is the difference between concurrency and parallelism?,general_knowledge,MODERATE,MEDIUM
+When should you use a graph database instead of a relational database?,simple_reasoning,MODERATE,MEDIUM
+Define supervised learning.,general_knowledge,LOW,SMALL
+Summarize the concept of gravity in one sentence.,summarization,LOW,SMALL
+"What is the full name of the organization commonly known as the United Nations, which was established after the Second World War?",factual,LOW,SMALL
+I would like to know the name of the person who is widely credited with inventing the World Wide Web in 1989.,factual,LOW,SMALL
+"Compare and contrast the architectural approaches of AWS, Azure, and GCP for building a globally distributed application. Analyze cost, latency, and reliability trade-offs.",analytical_reasoning,HIGH,LARGE
+Implement a basic hash table with collision handling.,coding,MODERATE,MEDIUM
+Write a Python decorator that logs function calls.,coding,MODERATE,MEDIUM
+What is the speed of light?,factual,LOW,SMALL
+Explain what a probability distribution is.,mathematics,MODERATE,MEDIUM
+What is the difference between a process and a thread?,general_knowledge,MODERATE,MEDIUM
+What is the largest planet in our solar system?,factual,LOW,SMALL
+First list the primary causes of the French Revolution. Then evaluate how these causes align with modern political unrest. Finally synthesize a framework for predicting future revolutions.,multi_step_reasoning,HIGH,LARGE
+What is a CPU?,general_knowledge,LOW,SMALL
+Write a function to detect cycles in a linked list.,coding,MODERATE,MEDIUM
+What is the capital of Brazil?,factual,LOW,SMALL
+Give a one-sentence summary of the French Revolution.,summarization,LOW,SMALL
+Define the term 'bandwidth'.,general_knowledge,LOW,SMALL
+How does a virtual machine differ from a container?,general_knowledge,MODERATE,MEDIUM
+Define 'open source software'.,general_knowledge,LOW,SMALL
+Who was Albert Einstein?,factual,LOW,SMALL
+What are the benefits of code review?,simple_reasoning,MODERATE,MEDIUM
+What is photosynthesis?,general_knowledge,LOW,SMALL
+"Design and implement a query optimizer for a simple SQL database. Cover parsing, logical plan generation, cost estimation, and physical plan selection.",coding,HIGH,LARGE
+Implement a binary search algorithm in Python.,coding,MODERATE,MEDIUM
+Prove P ≠ NP.,mathematics,HIGH,LARGE
+"Evaluate the pros and cons of different machine learning deployment strategies: batch vs real-time inference, A/B testing, canary deployments, and shadow mode.",analytical_reasoning,HIGH,LARGE
+What is the main language spoken in Brazil?,factual,LOW,SMALL
+Explain how Map-Reduce works for distributed computing.,summarization,MODERATE,MEDIUM
+Explain the concept of eventual consistency.,general_knowledge,MODERATE,MEDIUM
+"Compare and contrast different approaches to natural language understanding: rule-based, statistical, and neural methods. Analyze their strengths, weaknesses, and appropriate use cases with concrete examples.",analytical_reasoning,HIGH,LARGE
+How many planets are in our solar system?,factual,LOW,SMALL
+"Step by step, design a secure authentication system for a web application. Cover password hashing, session management, OAuth integration, MFA, and common attack mitigations.",multi_step_reasoning,HIGH,LARGE
+What is a database?,general_knowledge,LOW,SMALL
+Implement a breadth-first search algorithm.,coding,MODERATE,MEDIUM
+Summarize the key findings of the IPCC 2021 report on climate change.,summarization,MODERATE,MEDIUM
+What is a neural network?,general_knowledge,LOW,SMALL
+Briefly describe what an algorithm is.,summarization,LOW,SMALL
+What does DNA stand for?,factual,LOW,SMALL
+Write a SQL query to find the second highest salary.,coding,MODERATE,MEDIUM
+What year was the internet invented?,factual,LOW,SMALL
+What is the largest ocean?,factual,LOW,SMALL
+Design a machine learning pipeline for detecting fraudulent transactions with severe class imbalance and explain how you would evaluate it.,analytical_reasoning,HIGH,LARGE
+What year was the Declaration of Independence signed?,factual,LOW,SMALL
+Summarize the plot of The Lion King in one sentence.,summarization,LOW,SMALL
+Explain how HTTPS ensures secure communication.,general_knowledge,MODERATE,MEDIUM
+Why is testing important in software development?,simple_reasoning,MODERATE,MEDIUM
+"Design a complete autonomous vehicle perception system. Cover sensor fusion (LIDAR, camera, radar), object detection, tracking, lane detection, and decision-making. Explain the ML models, data pipeline, and safety constraints.",long_context_reasoning,HIGH,LARGE
+Who painted the Mona Lisa?,factual,LOW,SMALL
+What is an interface in programming?,general_knowledge,LOW,SMALL
+What is the difference between microservices and monolithic architecture?,general_knowledge,MODERATE,MEDIUM
+"Analyze the trade-offs between consistency, availability, and partition tolerance in distributed databases. Provide concrete examples with different database technologies.",analytical_reasoning,HIGH,LARGE
+Why is my WebSocket connection dropping frequently?,debugging,MODERATE,MEDIUM
+"In one line, what is artificial intelligence?",summarization,LOW,SMALL
+Why is my machine learning model showing high training accuracy but low test accuracy?,debugging,MODERATE,MEDIUM
+What does GPU stand for?,general_knowledge,LOW,SMALL
+What are the trade-offs of using microservices architecture?,simple_reasoning,MODERATE,MEDIUM
+What is the difference between horizontal and vertical scaling?,general_knowledge,MODERATE,MEDIUM
+What is the Internet of Things?,general_knowledge,LOW,SMALL
+"Design a scalable real-time chat application supporting 10 million concurrent users. Address message delivery guarantees, presence tracking, and offline message handling.",analytical_reasoning,HIGH,LARGE
+"Explain the complete lifecycle of a machine learning model from data collection to production deployment. Address data preprocessing, feature engineering, model selection, training, evaluation, and monitoring.",multi_step_reasoning,HIGH,LARGE
+What is a firewall?,general_knowledge,LOW,SMALL
+Explain the difference between supervised and unsupervised learning.,general_knowledge,MODERATE,MEDIUM
+Explain how JWT tokens work for authentication.,general_knowledge,MODERATE,MEDIUM
+What is the formula for water?,factual,LOW,SMALL
+How do I fix a CORS error in my web application?,debugging,MODERATE,MEDIUM
+What is a compiler?,general_knowledge,LOW,SMALL
+Why am I getting a NullPointerException in my Java code?,debugging,MODERATE,MEDIUM
+What is 15 times 13?,factual,LOW,SMALL
+What is the capital of Japan?,factual,LOW,SMALL
+How does a binary search tree work?,general_knowledge,MODERATE,MEDIUM
+What is the chemical symbol for sodium?,factual,LOW,SMALL
+"Design an end-to-end natural language processing pipeline for multilingual sentiment analysis. Cover data collection, annotation, preprocessing, model architecture, training, deployment, and continuous improvement.",multi_step_reasoning,HIGH,LARGE
+How do you read a file in Python?,coding,LOW,SMALL
+How does a load balancer distribute traffic?,general_knowledge,MODERATE,MEDIUM
+"Design a real-time video streaming platform supporting 4K content for millions of concurrent viewers. Address encoding, transcoding, adaptive bitrate streaming, CDN architecture, and quality of experience optimization.",long_context_reasoning,HIGH,LARGE
+Who discovered electricity?,factual,LOW,SMALL
+Implement a simple LRU cache in Python.,coding,MODERATE,MEDIUM
+Summarize how version control systems like Git work.,summarization,MODERATE,MEDIUM
+Why is rate limiting important for APIs?,simple_reasoning,MODERATE,MEDIUM
+What is the smallest country in the world?,factual,LOW,SMALL
+Derive the backpropagation algorithm for a multi-layer neural network. Show the complete mathematical derivation including the chain rule applications.,mathematics,HIGH,LARGE
+Explain the difference between deep copy and shallow copy in Python.,general_knowledge,MODERATE,MEDIUM
+What is the boiling point of water?,factual,LOW,SMALL
+Summarize the key differences between REST and GraphQL APIs.,summarization,MODERATE,MEDIUM
+Briefly describe the purpose of a database.,summarization,LOW,SMALL
+Implement the observer design pattern.,coding,MODERATE,MEDIUM
+What is dependency injection and why is it useful?,general_knowledge,MODERATE,MEDIUM
+"Our distributed system has a subtle race condition that only manifests under high load. Design a strategy for reproducing, diagnosing, and fixing the issue. Cover deterministic testing, distributed tracing, and formal verification.",debugging,HIGH,LARGE
+What is a software bug?,general_knowledge,LOW,SMALL
+When should you use connection pooling?,simple_reasoning,MODERATE,MEDIUM
+What is the speed of sound?,factual,LOW,SMALL
+"Design a recommendation system for an e-commerce platform. Explain collaborative filtering, content-based filtering, and hybrid approaches with their trade-offs.",analytical_reasoning,HIGH,LARGE
+How do you solve a system of linear equations?,mathematics,MODERATE,MEDIUM
+Explain the differences between TCP and UDP.,summarization,MODERATE,MEDIUM
+Explain how a message queue works.,general_knowledge,MODERATE,MEDIUM
+"Design a data lake architecture for a multinational corporation. Address data governance, schema evolution, access control, and cross-region replication.",analytical_reasoning,HIGH,LARGE
+Define the term 'algorithm'.,general_knowledge,LOW,SMALL
+Who wrote The Origin of Species?,factual,LOW,SMALL
+What is the name of the programming language that was created by Guido van Rossum and first released in 1991?,factual,LOW,SMALL
+When would you choose PostgreSQL over MongoDB?,simple_reasoning,MODERATE,MEDIUM
+Write a function to check if a string is a palindrome.,coding,MODERATE,MEDIUM
+Write a regular expression to validate email addresses.,coding,MODERATE,MEDIUM
+My SQL query is running very slowly. How do I optimize it?,debugging,MODERATE,MEDIUM
+What is recursion?,general_knowledge,LOW,SMALL
+What is the purpose of an operating system?,general_knowledge,LOW,SMALL
+Why is Python slower than C++ for computation-heavy tasks?,simple_reasoning,MODERATE,MEDIUM
+What does URL stand for?,general_knowledge,LOW,SMALL
+What does CSS stand for?,factual,LOW,SMALL
+What is the integral of sin(x)?,mathematics,MODERATE,MEDIUM
+"Design a distributed system for real-time fraud detection handling 1 million transactions per second. Explain the architecture, trade-offs, and failure handling.",analytical_reasoning,HIGH,LARGE
+"Implement a garbage collector using the mark-and-sweep algorithm. Explain memory management, root set identification, and compaction.",coding,HIGH,LARGE
+List three types of machine learning.,general_knowledge,LOW,SMALL
+How to fix a segmentation fault in C++?,debugging,MODERATE,MEDIUM
+Summarize how transformer models work in NLP.,summarization,MODERATE,MEDIUM
+"Design a distributed key-value store with consistent hashing, replication, and conflict resolution. Provide the core data structures and algorithms.",coding,HIGH,LARGE
+Why is input validation important for security?,simple_reasoning,MODERATE,MEDIUM
+What are the advantages of using a NoSQL database?,simple_reasoning,MODERATE,MEDIUM
+"In one line, what is the theory of relativity?",summarization,LOW,SMALL
+Summarize what machine learning is in one sentence.,summarization,LOW,SMALL
+Implement a stack using a linked list.,coding,MODERATE,MEDIUM
+"Step by step, explain how to build a CI/CD pipeline for a microservices application. Include testing strategies, deployment procedures, rollback mechanisms, and monitoring.",multi_step_reasoning,HIGH,LARGE
+"Design a fault-tolerant distributed consensus protocol. Explain the theoretical foundations, compare with Raft and Paxos, and analyze the trade-offs in terms of safety, liveness, and performance.",analytical_reasoning,HIGH,LARGE
+Debug this Python error: IndexError: list index out of range.,debugging,MODERATE,MEDIUM
+"Walk through the process of diagnosing and fixing a production outage in a microservices system. Cover incident detection, root cause analysis, remediation, and post-mortem.",multi_step_reasoning,HIGH,LARGE
+How many states are in the United States?,factual,LOW,SMALL
+What is the capital of Italy?,factual,LOW,SMALL
+"Evaluate different strategies for training large language models. Compare data parallelism, model parallelism, pipeline parallelism, and expert parallelism. Analyze memory requirements and communication overhead.",analytical_reasoning,HIGH,LARGE
+What is a function in programming?,general_knowledge,LOW,SMALL
+Summarize the major differences between Python 2 and Python 3.,summarization,MODERATE,MEDIUM
+Should I use a for loop or a while loop for iterating over a list?,simple_reasoning,LOW,SMALL
+"Step by step, derive the mathematics behind Principal Component Analysis. Explain the covariance matrix, eigendecomposition, and variance maximization. Then implement PCA from scratch.",multi_step_reasoning,HIGH,LARGE
+Summarize what a neural network does.,summarization,LOW,SMALL
+What are the pros and cons of using Redux for state management?,simple_reasoning,MODERATE,MEDIUM
+How does a blockchain maintain data integrity?,general_knowledge,MODERATE,MEDIUM
+Why should you use indexes in databases?,simple_reasoning,MODERATE,MEDIUM
+Who wrote Romeo and Juliet?,factual,LOW,SMALL
+Convert 100 Celsius to Fahrenheit.,factual,LOW,SMALL
+Which sorting algorithm is fastest for small arrays?,simple_reasoning,LOW,SMALL
+What is the tallest mountain in the world?,factual,LOW,SMALL
+What is the observer pattern and when should you use it?,general_knowledge,MODERATE,MEDIUM
+How does a hash map handle collisions?,general_knowledge,MODERATE,MEDIUM
+Name three programming languages.,factual,LOW,SMALL
+What is a data structure?,general_knowledge,LOW,SMALL
+"Given a large-scale e-commerce platform with millions of products, design a search and recommendation system that handles personalization, real-time inventory, multi-language support, and A/B testing. Explain the complete architecture.",long_context_reasoning,HIGH,LARGE
+Can you use CSS to make a website responsive?,simple_reasoning,LOW,SMALL
+What is the difference between authentication and authorization?,general_knowledge,MODERATE,MEDIUM
+Write a function to find all permutations of a string.,coding,MODERATE,MEDIUM
+Design an efficient algorithm for finding the shortest path in a weighted graph with negative edges and explain its complexity.,multi_step_reasoning,HIGH,LARGE
+Name two types of programming paradigms.,general_knowledge,LOW,SMALL
+Briefly explain the water cycle.,summarization,LOW,SMALL
+When should you use recursion versus iteration?,simple_reasoning,MODERATE,MEDIUM
+What is the SI unit of force?,factual,LOW,SMALL
+Explain how a relational database differs from a document database.,general_knowledge,MODERATE,MEDIUM
+"Can you please tell me the name of the country whose capital city is Tokyo, which is located in East Asia?",factual,LOW,SMALL
+Explain the CAP theorem in distributed systems.,general_knowledge,MODERATE,MEDIUM
+Define cloud computing.,general_knowledge,LOW,SMALL
+Why is my Docker container failing to start?,debugging,MODERATE,MEDIUM
+Explain the difference between permutations and combinations.,mathematics,MODERATE,MEDIUM
+"Design a complete ML ops platform for a large organization. Cover experiment tracking, model versioning, automated training pipelines, model registry, deployment orchestration, monitoring, and governance.",long_context_reasoning,HIGH,LARGE
+"Implement a simplified version of a B+ tree with insert, delete, and range query operations. Explain the algorithmic complexity of each operation.",coding,HIGH,LARGE
+How do search engines rank web pages?,general_knowledge,MODERATE,MEDIUM
+Derive the expectation-maximization algorithm for Gaussian mixture models. Explain the E-step and M-step with full mathematical detail.,mathematics,HIGH,LARGE
+What is the chemical formula for salt?,factual,LOW,SMALL
+Summarize the key principles of clean code.,summarization,MODERATE,MEDIUM
+My API returns a 502 Bad Gateway error intermittently. What could cause this?,debugging,MODERATE,MEDIUM
+Is Python an interpreted or compiled language?,simple_reasoning,LOW,SMALL
+"Create a comprehensive guide to building a production-ready recommendation engine. Cover data collection, feature stores, model training, A/B testing, cold start problem, and real-time serving infrastructure.",long_context_reasoning,HIGH,LARGE
+Explain the concept of a Markov chain.,mathematics,MODERATE,MEDIUM
+"Analyze the impact of artificial intelligence on the global economy over the next 20 years, considering trade-offs between automation, job displacement, and new industries.",analytical_reasoning,HIGH,LARGE
+Write a function to find the nth Fibonacci number using dynamic programming.,coding,MODERATE,MEDIUM
+What is the national animal of India?,factual,LOW,SMALL
+What is machine learning?,general_knowledge,LOW,SMALL
+Why is overfitting a problem in machine learning models?,simple_reasoning,MODERATE,MEDIUM
+"Explain the mathematical foundations of support vector machines, including the kernel trick, margin maximization, and the dual formulation.",mathematics,HIGH,LARGE
+"Evaluate the ethical implications of using facial recognition technology in public spaces. Consider privacy, security, bias, and civil liberties.",analytical_reasoning,HIGH,LARGE
+What is an operating system?,general_knowledge,LOW,SMALL
+"I have a machine learning model that shows 99% training accuracy but only 52% validation accuracy. The dataset has 1 million samples across 100 features. Analyze the possible causes, explain a systematic debugging approach, and propose solutions.",debugging,HIGH,LARGE
+Summarize what an API does in simple terms.,summarization,LOW,SMALL
+Why is immutability important in functional programming?,simple_reasoning,MODERATE,MEDIUM
+Who composed the Four Seasons?,factual,LOW,SMALL
+How many bones are in the human body?,factual,LOW,SMALL
+How do I fix a deadlock in concurrent code?,debugging,MODERATE,MEDIUM
+"You are given a dataset of 100 million customer transactions over 5 years. Design a complete analytics pipeline that identifies customer segments, predicts churn, recommends products, and detects anomalies. Explain each component.",long_context_reasoning,HIGH,LARGE
+Prove that the set of real numbers is uncountable using Cantor's diagonal argument. Explain each step rigorously.,mathematics,HIGH,LARGE
+Define Big O notation.,general_knowledge,LOW,SMALL
+"Our production Kubernetes cluster is experiencing intermittent pod failures, network timeouts, and memory pressure. Design a comprehensive troubleshooting methodology covering logs, metrics, events, and resource analysis.",debugging,HIGH,LARGE
+"Implement a complete Raft consensus algorithm. Explain leader election, log replication, safety guarantees, and membership changes. Analyze the complexity and failure modes.",coding,HIGH,LARGE
+Explain consciousness.,analytical_reasoning,HIGH,LARGE
+First analyze the time complexity of quicksort. Then explain why it performs poorly on already-sorted data. Finally design a hybrid sorting algorithm that addresses this weakness.,multi_step_reasoning,HIGH,LARGE
+Explain what eigenvalues and eigenvectors are.,mathematics,MODERATE,MEDIUM
+What is the difference between SQL and NoSQL databases?,general_knowledge,MODERATE,MEDIUM
+How do you calculate the area under a curve?,mathematics,MODERATE,MEDIUM
+Design a search engine from scratch. Step 1: Explain the web crawling architecture. Step 2: Describe the indexing mechanism. Step 3: Explain the ranking algorithm. Step 4: Discuss query processing and result serving.,multi_step_reasoning,HIGH,LARGE
+Prove the correctness of Dijkstra's algorithm using loop invariants. Then extend the proof to handle the case of negative edge weights with the Bellman-Ford algorithm.,mathematics,HIGH,LARGE
+Explain the concept of containerization and Docker.,general_knowledge,MODERATE,MEDIUM
+What year did World War II end?,factual,LOW,SMALL
+Explain the main principles of object-oriented programming.,summarization,MODERATE,MEDIUM
+What is the capital of Germany?,factual,LOW,SMALL
+What is the chain rule in calculus?,mathematics,MODERATE,MEDIUM
+What is the longest river in the world?,factual,LOW,SMALL
+Design a quantum computer.,analytical_reasoning,HIGH,LARGE
+Why do we need activation functions in neural networks?,simple_reasoning,MODERATE,MEDIUM
+Implement a priority queue using a heap.,coding,MODERATE,MEDIUM
+How many elements are in the periodic table?,factual,LOW,SMALL
+What is the purpose of a router in networking?,general_knowledge,LOW,SMALL
+Implement a simple REST API endpoint using Flask.,coding,MODERATE,MEDIUM
+How does gradient descent work mathematically?,mathematics,MODERATE,MEDIUM
+What is a hash function?,general_knowledge,LOW,SMALL
+Who is the CEO of Tesla?,factual,LOW,SMALL
+What is the square root of 144?,factual,LOW,SMALL
+What is the atomic number of carbon?,factual,LOW,SMALL
+"What is the difference between mean, median, and mode?",mathematics,MODERATE,MEDIUM
+What is version control?,general_knowledge,LOW,SMALL
+Why should you use environment variables for configuration?,simple_reasoning,MODERATE,MEDIUM
+Why is the sky blue?,simple_reasoning,LOW,SMALL
+Write a Python function to reverse a string.,coding,LOW,SMALL
+What is the difference between correlation and causation?,mathematics,MODERATE,MEDIUM
+Create a Python class for a binary tree with insert and search.,coding,MODERATE,MEDIUM
+Explain the main concepts of the Agile methodology.,summarization,MODERATE,MEDIUM
+What is the freezing point of water in Fahrenheit?,factual,LOW,SMALL
+Is HTML a programming language?,simple_reasoning,LOW,SMALL

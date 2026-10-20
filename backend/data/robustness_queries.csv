@@ -1,0 +1,114 @@
+id,query,case_type,ground_truth_tier,expected_routing_tier,has_defensible_ground_truth,labelling_notes
+ROB-001,State the sovereign seat of governance for the Japanese archipelago.,paraphrase_uncommon_wording,SMALL,SMALL,True,Paraphrase of 'What is the capital of Japan?'. Factual recall of Tokyo; solvable by smallest tier.
+ROB-002,Identify the biological macromolecule that conveys hereditary traits across generations.,paraphrase_uncommon_wording,SMALL,SMALL,True,Paraphrase of 'What is DNA?'. Single concept factual definition.
+ROB-003,Name the subatomic particle bearing negative electric charge situated in orbital shells.,paraphrase_uncommon_wording,SMALL,SMALL,True,Paraphrase of 'What is an electron?'. Basic scientific fact.
+ROB-004,Name the specific astronomical body around which the planet Neptune orbits.,paraphrase_uncommon_wording,SMALL,SMALL,True,Paraphrase of 'What does Neptune orbit?'. Direct factual recall (The Sun).
+ROB-005,Narrate the physiological pathway through which chloroplasts convert captured photons into glucose.,paraphrase_uncommon_wording,MEDIUM,MEDIUM,True,Paraphrase of 'Explain photosynthesis'. Requires structured multi-sentence biological explanation.
+ROB-006,Delineate how an interpreted runtime manages dynamic heap allocations versus compile-time stack frames.,paraphrase_uncommon_wording,MEDIUM,MEDIUM,True,Paraphrase of stack vs heap memory management without standard buzzwords.
+ROB-007,Furnish a Python snippet that reverses a singly linked list without allocating auxiliary nodes.,paraphrase_uncommon_wording,MEDIUM,MEDIUM,True,Paraphrase of 'Reverse a linked list in-place'. Standard data structures coding task.
+ROB-008,Elucidate why minimizing convex loss functions guarantees convergence to an absolute minimum.,paraphrase_uncommon_wording,MEDIUM,MEDIUM,True,Conceptual machine learning optimization inquiry expressed with advanced vocabulary.
+ROB-009,Trace the operational disparities between relational schemas in normal form and denormalized document stores.,paraphrase_uncommon_wording,MEDIUM,MEDIUM,True,Paraphrase of SQL vs NoSQL comparison using academic wording.
+ROB-010,Dissect the theoretical distinctions between linearizability and serializability in distributed datastores.,paraphrase_uncommon_wording,LARGE,LARGE,True,Subtle concurrency and consistency models in distributed systems; requires deep technical precision.
+ROB-011,Formulate a fault-tolerant multi-master consensus scheme resistant to network partitions and Byzantine corruption.,paraphrase_uncommon_wording,LARGE,LARGE,True,Advanced distributed systems architecture request avoiding the common word 'design'.
+ROB-012,Conduct a mathematical derivation of the Black-Scholes partial differential equation from Ito calculus foundations.,paraphrase_uncommon_wording,LARGE,LARGE,True,Formal mathematical derivation in stochastic calculus.
+ROB-013,Deconstruct the zero-knowledge argument construction in Groth16 and detail how pairing-friendly elliptic curves ensure soundness.,paraphrase_uncommon_wording,LARGE,LARGE,True,Cryptographic zero-knowledge proof analysis requiring deep domain expertise.
+ROB-014,The capital of the French Republic: name it.,unusual_syntax_vocabulary,SMALL,SMALL,True,Inverted syntax requesting Paris; trivial factual lookup.
+ROB-015,By whom was penicillin originally discovered in the year 1928?,unusual_syntax_vocabulary,SMALL,SMALL,True,Passive voice historical question (Alexander Fleming).
+ROB-016,"A binary digit, in common parlance, by what contracted moniker is it known?",unusual_syntax_vocabulary,SMALL,SMALL,True,Archaic/verbose phrasing for 'What is a bit?'.
+ROB-017,Which noble gas hath the lowest atomic mass upon the periodic table?,unusual_syntax_vocabulary,SMALL,SMALL,True,Archaic syntax for Helium.
+ROB-018,"Should a service encounter abrupt termination upon dereferencing a nil pointer, depict the recovery mechanism.",unusual_syntax_vocabulary,MEDIUM,MEDIUM,True,Conditional inversion discussing panic/recover or SIGSEGV handling.
+ROB-019,"Of hash tables and balanced binary search trees, which exhibite superior temporal bounds for arbitrary key access?",unusual_syntax_vocabulary,MEDIUM,MEDIUM,True,Archaic phrasing comparing O(1) vs O(log n) lookups.
+ROB-020,Whence arises the phenomenon known as vanishing gradient during the training of deep recursive networks?,unusual_syntax_vocabulary,MEDIUM,MEDIUM,True,Non-standard interrogative ('Whence') for machine learning concept.
+ROB-021,Upon what foundational premise does the Shannon-Nyquist sampling theorem rest regarding continuous signal discretization?,unusual_syntax_vocabulary,MEDIUM,MEDIUM,True,Formal academic syntax for signal processing theorem.
+ROB-022,"In Python, provided a dictionary of string keys to integer tallies, how might one invert keys and values safely?",unusual_syntax_vocabulary,MEDIUM,MEDIUM,True,Unusual conversational syntax for a dictionary inversion task.
+ROB-023,"In an asynchronous distributed setting beset with arbitrary Byzantine failures, by what formal reasoning is consensus impossible?",unusual_syntax_vocabulary,LARGE,LARGE,True,FLP theorem / Byzantine consensus inquiry framed in elevated prose.
+ROB-024,"Beholding a monolithic software edifice of 20 million lines, delineate an evolutionary blueprint toward autonomous bounded contexts.",unusual_syntax_vocabulary,LARGE,LARGE,True,Metaphorical literary phrasing for large-scale microservices refactoring architecture.
+ROB-025,Wherefore does the spectral gap of a normalized graph Laplacian govern the mixing time of a continuous-time Markov random walk?,unusual_syntax_vocabulary,LARGE,LARGE,True,Archaic adverb ('Wherefore') with deep spectral graph theory and stochastic processes.
+ROB-026,"Unto a payment processing substrate handling 50,000 requests per second, prescribe an idempotency and two-phase commit architecture.",unusual_syntax_vocabulary,LARGE,LARGE,True,High-throughput financial systems architecture framed with archaic prepositional syntax.
+ROB-027,Fix the bug.,ambiguous_missing_context,NONE,MEDIUM,False,Completely missing code and error trace. Requires conversational clarification.
+ROB-028,Make it faster.,ambiguous_missing_context,NONE,MEDIUM,False,"Missing reference subject, baseline metrics, and programming environment."
+ROB-029,Which one is better?,ambiguous_missing_context,NONE,MEDIUM,False,Missing items to compare and evaluation criteria.
+ROB-030,Write the test.,ambiguous_missing_context,NONE,MEDIUM,False,Missing function or specification to be tested.
+ROB-031,Is this secure?,ambiguous_missing_context,NONE,MEDIUM,False,"Missing code snippet, architectural diagram, or threat model."
+ROB-032,Process the data.,ambiguous_missing_context,NONE,MEDIUM,False,"Missing dataset schema, source format, and intended transformation."
+ROB-033,Optimize the model.,ambiguous_missing_context,NONE,MEDIUM,False,"Ambiguous whether hyperparameter tuning, quantization, or re-architecture is desired."
+ROB-034,Deploy it.,ambiguous_missing_context,NONE,MEDIUM,False,"Missing infrastructure target (AWS, GCP, K8s, bare metal) and application artifact."
+ROB-035,What went wrong here?,ambiguous_missing_context,NONE,MEDIUM,False,"Missing log output, stack trace, or system state description."
+ROB-036,Refactor this.,ambiguous_missing_context,NONE,MEDIUM,False,Missing source code and refactoring target guidelines.
+ROB-037,Calculate the result.,ambiguous_missing_context,NONE,MEDIUM,False,"Missing formula, variables, or input dataset."
+ROB-038,Check the difference.,ambiguous_missing_context,NONE,MEDIUM,False,Missing candidate objects or metrics to contrast.
+ROB-039,Review this implementation.,ambiguous_missing_context,NONE,MEDIUM,False,No code provided to review.
+ROB-040,A distributed ledger receives updates simultaneously from nodes across the Atlantic; clocks are out of sync by up to 200ms and messages can arrive out of order. We must guarantee that every replica processes balance transfers in the exact same sequence.,complex_no_keywords,LARGE,LARGE,True,Logical clocks / Paxos consensus task completely avoiding trigger keywords.
+ROB-041,"Two processes increment a shared counter 100,000 times concurrently on a multicore CPU without locks. The final value is 142,391 instead of 200,000. Show the exact assembly instructions and cache coherence states responsible for the missing counts.",complex_no_keywords,LARGE,LARGE,True,Low-level concurrency race condition and MESI cache protocol analysis.
+ROB-042,"A language accepts sequences of balanced parentheses where each opening bracket must be closed by the matching symbol, but brackets can be nested up to arbitrary depth. Can a finite automaton accept this language? Show why.",complex_no_keywords,LARGE,LARGE,True,Pumping Lemma proof for non-regularity of Dyck language; requires theoretical CS formal reasoning.
+ROB-043,A database node crashes halfway through writing a 64KB page to disk during a transaction commit. How does write-ahead logging with ARIES recover the state upon restart?,complex_no_keywords,LARGE,LARGE,True,"Database crash recovery (Analysis, Redo, Undo phases of ARIES) without explicit keywords."
+ROB-044,We have an unweighted graph where every vertex has degree at least d. Must there exist a cycle of length at least d + 1? Provide the argument.,complex_no_keywords,LARGE,LARGE,True,Extremal graph theory problem using maximal path arguments.
+ROB-045,An attacker intercepts ciphertext produced by AES-CBC where the initialization vector is predictable. Show how they can confirm whether an arbitrary plaintext block matches a guess.,complex_no_keywords,LARGE,LARGE,True,Cryptographic chosen-plaintext attack against predictable IVs in CBC mode.
+ROB-046,"In a peer-to-peer network with 10,000 nodes where nodes leave without warning, we want lookups to succeed with high probability in at most logarithmic hops. Describe the routing table structure.",complex_no_keywords,LARGE,LARGE,True,Distributed Hash Table (Chord/Kademlia) routing mechanics without trigger keywords.
+ROB-047,A machine learning pipeline trains a classifier where 99.5% of labels are negative. Accuracy is 99.4% but the business is losing millions because false negatives go undetected. Propose an appropriate loss formulation and evaluation strategy.,complex_no_keywords,MEDIUM,MEDIUM,True,"Severe class imbalance problem addressing focal loss, PR-AUC, and cost-sensitive classification."
+ROB-048,A recursive function computes Fibonacci numbers in exponential time due to repeated subproblems. Transform it into a linear-time version using bottom-up tabulation in JavaScript.,complex_no_keywords,MEDIUM,MEDIUM,True,Classic dynamic programming transformation without using the word 'algorithm'.
+ROB-049,"A microservice returns HTTP 504 Gateway Timeout only when upstream traffic spikes above 2,000 requests per second, while CPU utilization remains below 20%. Where is the bottleneck likely situated?",complex_no_keywords,MEDIUM,MEDIUM,True,Connection pool exhaustion / socket starvation debugging inquiry.
+ROB-050,"Given a collection of intervals on a timeline, merge all overlapping ranges so that no two output ranges intersect. Output the merged intervals in order.",complex_no_keywords,MEDIUM,MEDIUM,True,Classic interval merging programming task without buzzwords.
+ROB-051,A neural model produces high training loss that fluctuates wildly between batches and eventually becomes NaN after 500 steps. What learning rate adjustment or normalization technique should be applied?,complex_no_keywords,MEDIUM,MEDIUM,True,"Exploding gradients diagnostic and mitigation (gradient clipping, warmups)."
+ROB-052,"Given an array of integers with both positive and negative values, find the contiguous sub-array with the maximum sum.",complex_no_keywords,MEDIUM,MEDIUM,True,Kadane's algorithm task stated without mentioning 'algorithm' or 'Kadane'.
+ROB-053,,empty_whitespace,NONE,MEDIUM,False,Completely empty string; fallback guard must trigger.
+ROB-054, ,empty_whitespace,NONE,MEDIUM,False,Single space character.
+ROB-055,   ,empty_whitespace,NONE,MEDIUM,False,Three space characters.
+ROB-056,	,empty_whitespace,NONE,MEDIUM,False,Single horizontal tab character.
+ROB-057,			,empty_whitespace,NONE,MEDIUM,False,Multiple tab characters.
+ROB-058,"
+",empty_whitespace,NONE,MEDIUM,False,Single newline character.
+ROB-059,"
+
+
+",empty_whitespace,NONE,MEDIUM,False,Multiple newline characters.
+ROB-060,"
+",empty_whitespace,NONE,MEDIUM,False,Windows CRLF newline.
+ROB-061,"
+
+",empty_whitespace,NONE,MEDIUM,False,Double Windows CRLF newline.
+ROB-062,"   	   
+   ",empty_whitespace,NONE,MEDIUM,False,"Mixed spaces, tabs, and newline."
+ROB-063,"	 
+ 	",empty_whitespace,NONE,MEDIUM,False,Mixed whitespace sequence with tabs and carriage returns.
+ROB-064,               ,empty_whitespace,NONE,MEDIUM,False,Long sequence of 15 space characters.
+ROB-065,asdfghjkl qwertyuiop,nonsense_random_tokens,NONE,MEDIUM,False,Standard QWERTY keyboard row smash.
+ROB-066,zxcvbnmpoiuytrewqasdfghjkl,nonsense_random_tokens,NONE,MEDIUM,False,Single continuous keyboard mash token.
+ROB-067,a8f23bc99401fe37b12d5930e44,nonsense_random_tokens,NONE,MEDIUM,False,Random hexadecimal hash string.
+ROB-068,...???!!!;;;---:::***,nonsense_random_tokens,NONE,MEDIUM,False,Pure punctuation characters with zero alphanumeric tokens.
+ROB-069,flibber gibber wobber gloop trazzle plink,nonsense_random_tokens,NONE,MEDIUM,False,Syntactically plausible pseudo-words (nonce tokens) with no semantic meaning.
+ROB-070,the of and to a in that is was he for it with as his on be at,nonsense_random_tokens,NONE,MEDIUM,False,"Stopword soup with no predicate, verb phrase, or coherent semantic intent."
+ROB-071,aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa,nonsense_random_tokens,NONE,MEDIUM,False,Repeated single-character string.
+ROB-072,1234567890 0987654321 5555555555,nonsense_random_tokens,NONE,MEDIUM,False,Arbitrary integer sequence without mathematical operator or problem statement.
+ROB-073,blorp zazzle quux fribble snark,nonsense_random_tokens,NONE,MEDIUM,False,Random jargon / metasyntactic nonsense syllables.
+ROB-074,/// \\\ &&& %%% $$$ ### @@@,nonsense_random_tokens,NONE,MEDIUM,False,Non-alphanumeric special character clusters.
+ROB-075,xkcd 99482 jfkldsa; 3910398 !!,nonsense_random_tokens,NONE,MEDIUM,False,Mixed alphanumeric noise with trailing punctuation.
+ROB-076,lorem ipsum dolor sit amet consectetur adipiscing elit,nonsense_random_tokens,NONE,MEDIUM,False,Latin placeholder text with no instructions or query intent.
+ROB-077,null undefined NaN void 0 [object Object],nonsense_random_tokens,NONE,MEDIUM,False,Programming null/sentinel tokens dumped without context.
+ROB-078,"!@#$%^&*()_+=-`~[]{}|;':"",./<>?",nonsense_random_tokens,NONE,MEDIUM,False,Full keyboard symbol row.
+ROB-079,Prove P != NP.,short_difficult,LARGE,LARGE,True,Extremely short (14 chars) Millennium Prize problem. Requires deepest reasoning model.
+ROB-080,Derive the Navier-Stokes equations.,short_difficult,LARGE,LARGE,True,Short (35 chars) rigorous fluid dynamics continuum mechanics derivation.
+ROB-081,Is Chaitin's constant Omega computable?,short_difficult,LARGE,LARGE,True,Algorithmic information theory inquiry regarding uncomputable halting probabilities.
+ROB-082,Solve Einstein's field equations for a Kerr metric.,short_difficult,LARGE,LARGE,True,General relativity rotating black hole tensor calculation.
+ROB-083,Prove Gödel's First Incompleteness Theorem.,short_difficult,LARGE,LARGE,True,Formal mathematical logic proof via Gödel numbering and self-reference.
+ROB-084,Construct a non-measurable set of real numbers.,short_difficult,LARGE,LARGE,True,Measure theory construction of Vitali set requiring Axiom of Choice.
+ROB-085,Prove the Poincaré conjecture for 3-manifolds.,short_difficult,LARGE,LARGE,True,Ricci flow with surgery topology proof (Perelman).
+ROB-086,Does ZFC have a transitive model?,short_difficult,LARGE,LARGE,True,Axiomatic set theory and model theory question on inaccessible cardinals.
+ROB-087,Derive the Bekenstein-Hawking entropy formula.,short_difficult,LARGE,LARGE,True,Quantum field theory in curved spacetime derivation.
+ROB-088,Prove Fermat's Last Theorem for n = 3.,short_difficult,LARGE,LARGE,True,Euler's algebraic number theory proof using Eisenstein integers.
+ROB-089,Is the Collatz conjecture decidable?,short_difficult,LARGE,LARGE,True,Computability theory question on whether generalized 3x+1 problems are undecidable.
+ROB-090,Derive Bellman's equation for continuous-time POMDPs.,short_difficult,LARGE,LARGE,True,Stochastic optimal control with partial observability.
+ROB-091,Prove the Riemann hypothesis for function fields.,short_difficult,LARGE,LARGE,True,Weil's theorem for curves over finite fields in algebraic geometry.
+ROB-092,"Hello there friendly virtual assistant! I was sitting in my living room yesterday evening drinking tea and reading a book about European geography and history. While gazing out at the rainy weather, I suddenly realized that for the life of me I could not recall what municipal city officially serves as the seat of government and capital of the nation of France. Could you kindly remind me what that city is?",long_simple,SMALL,SMALL,True,"78 words / 419 chars, but asks for the capital of France. Needs SMALL."
+ROB-093,I hope you are doing well today. My eight-year-old child just came home from elementary school with a basic science quiz sheet and asked me a question that I want to double-check before giving them the answer. The question on their worksheet is simply asking for the standard chemical molecular formula that scientists use to represent pure water. What is that formula?,long_simple,SMALL,SMALL,True,"67 words / 369 chars, asks for H2O. Solvable by smallest tier."
+ROB-094,"Throughout the late twentieth century, space exploration represented one of the most visible frontiers of human technological achievement, culminating in the Apollo lunar missions conducted by NASA. Speaking specifically of the Apollo 11 mission that touched down on the Moon in July of 1969, who was the first human astronaut to step onto the lunar surface?",long_simple,SMALL,SMALL,True,"59 words / 358 chars, asks for Neil Armstrong."
+ROB-095,I am putting together a general trivia night contest for my local community center this coming weekend and I need to verify the answer key for our round on basic biology and anatomy. The question I wrote down is: what is the name of the primary organ inside the human circulatory system that pumps oxygenated blood throughout the body?,long_simple,SMALL,SMALL,True,"61 words / 333 chars, asks for the heart."
+ROB-096,"While browsing the internet and reading articles about personal computer hardware from the 1990s and early 2000s, I kept seeing the acronym CPU mentioned in almost every single paragraph describing computer components. Could you please just tell me what the three letters in the acronym CPU stand for in plain English?",long_simple,SMALL,SMALL,True,"53 words / 324 chars, asks for Central Processing Unit."
+ROB-097,Good morning assistant! I am currently making my weekly grocery shopping list and planning out some basic home baking recipes for the weekend. I want to bake a traditional loaf of plain white sandwich bread from scratch. Could you list the four very basic primary ingredients typically needed to make simple bread dough?,long_simple,SMALL,SMALL,True,"55 words / 326 chars, asks for flour, water, yeast, salt."
+ROB-098,"In our seventh-grade social studies curriculum, we are currently learning about the geographical landscape of the North American continent. One of the study questions asks about the sovereign nations that share direct land borders with the United States. What are the two countries that directly border the continental United States?",long_simple,SMALL,SMALL,True,"53 words / 333 chars, asks for Canada and Mexico."
+ROB-099,"Hello! I am reading a historical fiction novel set during the Renaissance in Florence and Venice, and the characters keep talking about the monetary currency they use for commerce and trade. In modern times, what is the official currency used across Italy and most member nations of the European Union?",long_simple,SMALL,SMALL,True,"51 words / 303 chars, asks for the Euro."
+ROB-100,"I am working on a simple crossword puzzle in the Sunday morning newspaper and I am stuck on a clue that says 'The closest planet in our solar system to the Sun, 7 letters'. Could you please provide the name of that planet so I can complete the puzzle?",long_simple,SMALL,SMALL,True,"50 words / 256 chars, asks for Mercury."
+ROB-101,My friend and I were having a friendly debate over lunch about classic English literature and playwrights of the Elizabethan era. We were specifically discussing the famous tragedy involving the Prince of Denmark and the quote 'To be or not to be'. Who was the author who wrote the play Hamlet?,long_simple,SMALL,SMALL,True,"53 words / 295 chars, asks for William Shakespeare."
+ROB-102,"While looking up basic astronomical facts about our solar system for an introductory science quiz, I came across information regarding the atmospheric composition and distinctive reddish coloration of our neighboring fourth planet from the Sun. What is the common name of this planet known as the Red Planet?",long_simple,SMALL,SMALL,True,"49 words / 309 chars, asks for Mars."
+ROB-103,"I am setting up a basic home network router and reading through the manufacturer setup guide booklet that came inside the retail packaging box. The instructions refer multiple times to an IP address. In simple terms, what does the abbreviation IP stand for in network technology?",long_simple,SMALL,SMALL,True,"46 words / 281 chars, asks for Internet Protocol."
+ROB-104,Can you please tell me in one short word or number how many distinct days are contained in a standard non-leap calendar year according to the modern Gregorian calendar system used across most of the world today?,long_simple,SMALL,SMALL,True,"38 words / 215 chars, asks for 365."

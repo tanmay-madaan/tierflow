@@ -1,0 +1,13 @@
+run_id,prompt_id,category,policy,selected_model,model_id,latency,prompt_tokens,completion_tokens,cost,quality_score,eval_details,error
+run_2897d8af,fact_01,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,2.5406,11,41,0.00134,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+run_2897d8af,fact_01,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2139,11,23,1.545e-05,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+run_2897d8af,fact_01,factual,RULE_BASED,SMALL,demo-small-simulated,0.1458,11,23,1.545e-05,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+run_2897d8af,fact_02,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,3.2769,16,32,0.00112,10.0,Target reference '1969' or accepted alias identified in response.,
+run_2897d8af,fact_02,factual,ADAPTIVE_ML,MEDIUM,demo-medium-simulated,0.7592,16,29,0.00033,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference '1969'.",
+run_2897d8af,fact_02,factual,RULE_BASED,MEDIUM,demo-medium-simulated,0.7012,16,29,0.00033,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference '1969'.",
+run_2897d8af,fact_03,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,3.2884,10,28,0.00094,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+run_2897d8af,fact_03,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2691,10,10,7.5e-06,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+run_2897d8af,fact_03,factual,RULE_BASED,SMALL,demo-small-simulated,0.2507,10,10,7.5e-06,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+run_2897d8af,fact_04,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,2.1445,6,26,0.00084,10.0,Target reference 'Alexander Fleming' or accepted alias identified in response.,
+run_2897d8af,fact_04,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2733,6,7,5.1e-06,10.0,Target reference 'Alexander Fleming' or accepted alias identified in response.,
+run_2897d8af,fact_04,factual,RULE_BASED,SMALL,demo-small-simulated,0.265,6,7,5.1e-06,10.0,Target reference 'Alexander Fleming' or accepted alias identified in response.,

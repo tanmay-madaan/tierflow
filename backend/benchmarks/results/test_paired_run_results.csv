@@ -1,0 +1,10 @@
+run_id,prompt_id,category,policy,selected_model,model_id,latency,prompt_tokens,completion_tokens,cost,quality_score,eval_details,error
+test_paired_run,fact_01,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,3.4117,11,41,0.00067,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+test_paired_run,fact_01,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2557,11,23,1.545e-05,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+test_paired_run,fact_01,factual,RULE_BASED,SMALL,demo-small-simulated,0.2008,11,23,1.545e-05,10.0,Target reference 'Mariana Trench' or accepted alias identified in response.,
+test_paired_run,fact_02,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,1.641,16,32,0.00056,10.0,Target reference '1969' or accepted alias identified in response.,
+test_paired_run,fact_02,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.1267,16,14,1.08e-05,10.0,Target reference '1969' or accepted alias identified in response.,
+test_paired_run,fact_02,factual,RULE_BASED,MEDIUM,demo-medium-simulated,0.738,16,29,0.00033,0.0,"Token overlap recall: 0.00, F1: 0.00 against reference '1969'.",
+test_paired_run,fact_03,factual,ALWAYS_LARGE,LARGE,demo-large-simulated,2.7389,10,28,0.00047,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+test_paired_run,fact_03,factual,ADAPTIVE_ML,SMALL,demo-small-simulated,0.2702,10,10,7.5e-06,10.0,Target reference 'Wellington' or accepted alias identified in response.,
+test_paired_run,fact_03,factual,RULE_BASED,SMALL,demo-small-simulated,0.2771,10,10,7.5e-06,10.0,Target reference 'Wellington' or accepted alias identified in response.,

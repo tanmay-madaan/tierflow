@@ -1,0 +1,410 @@
+{
+  "generated_at": "2026-10-18T16:20:35.831797+00:00",
+  "random_seed": 42,
+  "data_audit": {
+    "source_file": "C:\\Users\\Tanmay Madaan\\OneDrive\\Desktop\\AI4R\\adaptive-llm-router\\backend\\data\\queries.csv",
+    "rows_raw": 325,
+    "rows_unique_query": 325,
+    "rows_dropped_null": 0,
+    "rows_dropped_exact_dup": 0,
+    "rows_dropped_near_dup": 0,
+    "rows_after_dedup": 325,
+    "class_distribution_after_dedup": {
+      "SMALL": 133,
+      "MEDIUM": 126,
+      "LARGE": 66
+    }
+  },
+  "split_sizes": {
+    "train": 227,
+    "val": 49,
+    "test": 49
+  },
+  "methodology_notes": [
+    "TF-IDF vectorizer and StandardScaler fitted on training split only.",
+    "Validation split used for threshold selection and calibration fitting.",
+    "Test split evaluated once after all design decisions finalised.",
+    "Labels are heuristic (manually assigned by category rules, not human judges).",
+    "LARGE class is under-represented (\u224820%), which may inflate per-class metrics.",
+    "Dataset size is small (~325 unique queries); treat results as indicative only.",
+    "Cost figures are estimated offline relative costs based on configured per-token pricing."
+  ],
+  "calibration_analysis": {
+    "validation": {
+      "uncalibrated_brier": 0.285,
+      "uncalibrated_ece_5bins": 0.1298,
+      "calibrated_platt_brier": 0.3318,
+      "calibrated_platt_ece_5bins": 0.0994,
+      "bin_details": [
+        {
+          "bin": [
+            0.4,
+            0.6
+          ],
+          "count": 4,
+          "acc": 0.5,
+          "conf": 0.5207
+        },
+        {
+          "bin": [
+            0.6,
+            0.8
+          ],
+          "count": 14,
+          "acc": 0.9286,
+          "conf": 0.6761
+        },
+        {
+          "bin": [
+            0.8,
+            1.0
+          ],
+          "count": 31,
+          "acc": 0.8387,
+          "conf": 0.9271
+        }
+      ]
+    },
+    "test": {
+      "uncalibrated_brier": 0.1824,
+      "uncalibrated_ece_5bins": 0.0712,
+      "calibrated_platt_brier": 0.277,
+      "calibrated_platt_ece_5bins": 0.2008,
+      "bin_details": [
+        {
+          "bin": [
+            0.4,
+            0.6
+          ],
+          "count": 6,
+          "acc": 0.6667,
+          "conf": 0.52
+        },
+        {
+          "bin": [
+            0.6,
+            0.8
+          ],
+          "count": 13,
+          "acc": 0.7692,
+          "conf": 0.6952
+        },
+        {
+          "bin": [
+            0.8,
+            1.0
+          ],
+          "count": 30,
+          "acc": 0.9667,
+          "conf": 0.9118
+        }
+      ]
+    },
+    "calibration_finding": "Post-hoc Platt scaling fitted on N=49 validation split degrades test Brier score and test ECE due to high estimator variance on small sample size. Uncalibrated multinomial logistic regression probabilities are more reliable."
+  },
+  "policy_comparison": {
+    "current_adaptive_router_0.50": {
+      "accuracy": 0.8776,
+      "macro_f1": 0.8891,
+      "escalation_count": 0,
+      "escalation_pct": 0.0,
+      "estimated_cost_per_query": 0.0006515,
+      "tier_distribution": {
+        "MEDIUM": 21,
+        "SMALL": 17,
+        "LARGE": 11
+      }
+    },
+    "confidence_aware_router_0.60_0.40": {
+      "accuracy": 0.8571,
+      "macro_f1": 0.8717,
+      "escalation_count": 1,
+      "escalation_pct": 2.04,
+      "estimated_cost_per_query": 0.0006531,
+      "tier_distribution": {
+        "MEDIUM": 22,
+        "SMALL": 16,
+        "LARGE": 11
+      },
+      "cost_reduction_vs_large_pct": 73.88
+    },
+    "rule_based_baseline": {
+      "accuracy": 0.6939,
+      "macro_f1": 0.7063,
+      "estimated_cost_per_query": 0.0004429,
+      "tier_distribution": {
+        "SMALL": 28,
+        "MEDIUM": 14,
+        "LARGE": 7
+      },
+      "cost_reduction_vs_large_pct": 82.29
+    },
+    "always_large_baseline": {
+      "accuracy": 0.2041,
+      "macro_f1": 0.113,
+      "estimated_cost_per_query": 0.0025,
+      "tier_distribution": {
+        "LARGE": 49
+      }
+    }
+  },
+  "in_sample_train_metrics": {
+    "split": "train_in_sample",
+    "n_samples": 227,
+    "accuracy": 0.947136563876652,
+    "macro_precision": 0.9572184254218309,
+    "macro_recall": 0.9378639126184708,
+    "macro_f1": 0.9463498996858989,
+    "confusion_matrix": [
+      [
+        41,
+        2,
+        3
+      ],
+      [
+        0,
+        84,
+        4
+      ],
+      [
+        0,
+        3,
+        90
+      ]
+    ],
+    "class_labels": [
+      "LARGE",
+      "MEDIUM",
+      "SMALL"
+    ],
+    "per_class": {
+      "LARGE": {
+        "precision": 1.0,
+        "recall": 0.8913,
+        "f1-score": 0.9425,
+        "support": 46.0
+      },
+      "MEDIUM": {
+        "precision": 0.9438,
+        "recall": 0.9545,
+        "f1-score": 0.9492,
+        "support": 88.0
+      },
+      "SMALL": {
+        "precision": 0.9278,
+        "recall": 0.9677,
+        "f1-score": 0.9474,
+        "support": 93.0
+      }
+    }
+  },
+  "validation_metrics": {
+    "split": "validation",
+    "n_samples": 49,
+    "accuracy": 0.8367346938775511,
+    "macro_precision": 0.8738277919863598,
+    "macro_recall": 0.8482456140350877,
+    "macro_f1": 0.8559010137957507,
+    "confusion_matrix": [
+      [
+        9,
+        1,
+        0
+      ],
+      [
+        0,
+        17,
+        2
+      ],
+      [
+        0,
+        5,
+        15
+      ]
+    ],
+    "class_labels": [
+      "LARGE",
+      "MEDIUM",
+      "SMALL"
+    ],
+    "per_class": {
+      "LARGE": {
+        "precision": 1.0,
+        "recall": 0.9,
+        "f1-score": 0.9474,
+        "support": 10.0
+      },
+      "MEDIUM": {
+        "precision": 0.7391,
+        "recall": 0.8947,
+        "f1-score": 0.8095,
+        "support": 19.0
+      },
+      "SMALL": {
+        "precision": 0.8824,
+        "recall": 0.75,
+        "f1-score": 0.8108,
+        "support": 20.0
+      }
+    }
+  },
+  "test_metrics": {
+    "ml_router": {
+      "split": "test_ml_router",
+      "n_samples": 49,
+      "accuracy": 0.8775510204081632,
+      "macro_precision": 0.8865970630676513,
+      "macro_recall": 0.8982456140350878,
+      "macro_f1": 0.889081939081939,
+      "confusion_matrix": [
+        [
+          10,
+          0,
+          0
+        ],
+        [
+          1,
+          17,
+          1
+        ],
+        [
+          0,
+          4,
+          16
+        ]
+      ],
+      "class_labels": [
+        "LARGE",
+        "MEDIUM",
+        "SMALL"
+      ],
+      "per_class": {
+        "LARGE": {
+          "precision": 0.9091,
+          "recall": 1.0,
+          "f1-score": 0.9524,
+          "support": 10.0
+        },
+        "MEDIUM": {
+          "precision": 0.8095,
+          "recall": 0.8947,
+          "f1-score": 0.85,
+          "support": 19.0
+        },
+        "SMALL": {
+          "precision": 0.9412,
+          "recall": 0.8,
+          "f1-score": 0.8649,
+          "support": 20.0
+        }
+      }
+    },
+    "most_frequent_baseline": {
+      "split": "test_most_frequent_baseline",
+      "n_samples": 49,
+      "accuracy": 0.40816326530612246,
+      "macro_precision": 0.1360544217687075,
+      "macro_recall": 0.3333333333333333,
+      "macro_f1": 0.1932367149758454,
+      "confusion_matrix": [
+        [
+          0,
+          0,
+          10
+        ],
+        [
+          0,
+          0,
+          19
+        ],
+        [
+          0,
+          0,
+          20
+        ]
+      ],
+      "class_labels": [
+        "LARGE",
+        "MEDIUM",
+        "SMALL"
+      ],
+      "per_class": {
+        "LARGE": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "MEDIUM": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 19.0
+        },
+        "SMALL": {
+          "precision": 0.4082,
+          "recall": 1.0,
+          "f1-score": 0.5797,
+          "support": 20.0
+        }
+      },
+      "predicted_class": "SMALL"
+    },
+    "rule_based_baseline": {
+      "split": "test_rule_based_baseline",
+      "n_samples": 49,
+      "accuracy": 0.6938775510204082,
+      "macro_precision": 0.7619047619047619,
+      "macro_recall": 0.6912280701754385,
+      "macro_f1": 0.7063279857397505,
+      "confusion_matrix": [
+        [
+          7,
+          3,
+          0
+        ],
+        [
+          0,
+          9,
+          10
+        ],
+        [
+          0,
+          2,
+          18
+        ]
+      ],
+      "class_labels": [
+        "LARGE",
+        "MEDIUM",
+        "SMALL"
+      ],
+      "per_class": {
+        "LARGE": {
+          "precision": 1.0,
+          "recall": 0.7,
+          "f1-score": 0.8235,
+          "support": 10.0
+        },
+        "MEDIUM": {
+          "precision": 0.6429,
+          "recall": 0.4737,
+          "f1-score": 0.5455,
+          "support": 19.0
+        },
+        "SMALL": {
+          "precision": 0.6429,
+          "recall": 0.9,
+          "f1-score": 0.75,
+          "support": 20.0
+        }
+      }
+    }
+  },
+  "label_quality_notes": [
+    "Labels assigned deterministically by category (analytical_reasoning\u2192LARGE, etc.).",
+    "Same category is always the same label \u2014 classifier can learn category from keywords,",
+    "which inflates accuracy relative to genuinely ambiguous real-world queries.",
+    "Tricky examples (short queries\u2192LARGE, long queries\u2192SMALL) included but are few."
+  ]
+}

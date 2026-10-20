@@ -1,0 +1,835 @@
+{
+  "generated_at": "2026-10-18T16:36:39.302912+00:00",
+  "dataset_path": "C:\\Users\\Tanmay Madaan\\OneDrive\\Desktop\\AI4R\\adaptive-llm-router\\backend\\data\\robustness_queries.csv",
+  "total_queries": 104,
+  "defensible_ground_truth_count": 65,
+  "non_defensible_count": 39,
+  "methodology_notes": [
+    "Classification accuracy and F1 metrics computed ONLY on the 65 cases with defensible ground truth.",
+    "Empty inputs, random nonsense, and ambiguous queries have ground_truth_tier=NONE and are excluded from accuracy.",
+    "Zero provider calls were made; evaluation is completely offline and reproducible.",
+    "High classifier confidence on out-of-distribution or nonsense text demonstrates linear model overconfidence."
+  ],
+  "defensible_ground_truth_metrics": {
+    "classifier": {
+      "classifier_accuracy": 0.3231,
+      "classifier_macro_precision": 0.3388,
+      "classifier_macro_recall": 0.3353,
+      "classifier_macro_f1": 0.3349,
+      "classifier_per_class": {
+        "LARGE": {
+          "precision": 0.28,
+          "recall": 0.25,
+          "f1": 0.2642,
+          "support": 28
+        },
+        "MEDIUM": {
+          "precision": 0.4286,
+          "recall": 0.375,
+          "f1": 0.4,
+          "support": 16
+        },
+        "SMALL": {
+          "precision": 0.3077,
+          "recall": 0.381,
+          "f1": 0.3404,
+          "support": 21
+        }
+      },
+      "classifier_confusion_matrix": [
+        [
+          7,
+          8,
+          13
+        ],
+        [
+          5,
+          6,
+          5
+        ],
+        [
+          13,
+          0,
+          8
+        ]
+      ],
+      "classifier_confusion_matrix_labels": [
+        "LARGE",
+        "MEDIUM",
+        "SMALL"
+      ]
+    },
+    "production_router_confidence_aware": {
+      "router_accuracy": 0.4308,
+      "router_macro_precision": 0.4383,
+      "router_macro_recall": 0.4365,
+      "router_macro_f1": 0.4363,
+      "router_per_class": {
+        "LARGE": {
+          "precision": 0.4,
+          "recall": 0.4286,
+          "f1": 0.4138,
+          "support": 28
+        },
+        "MEDIUM": {
+          "precision": 0.4706,
+          "recall": 0.5,
+          "f1": 0.4848,
+          "support": 16
+        },
+        "SMALL": {
+          "precision": 0.4444,
+          "recall": 0.381,
+          "f1": 0.4103,
+          "support": 21
+        }
+      },
+      "router_confusion_matrix": [
+        [
+          12,
+          9,
+          7
+        ],
+        [
+          5,
+          8,
+          3
+        ],
+        [
+          13,
+          0,
+          8
+        ]
+      ],
+      "router_confusion_matrix_labels": [
+        "LARGE",
+        "MEDIUM",
+        "SMALL"
+      ]
+    },
+    "legacy_router_0.50": {
+      "legacy_accuracy": 0.3385,
+      "legacy_macro_precision": 0.348,
+      "legacy_macro_recall": 0.3472,
+      "legacy_macro_f1": 0.3472,
+      "legacy_per_class": {
+        "LARGE": {
+          "precision": 0.2963,
+          "recall": 0.2857,
+          "f1": 0.2909,
+          "support": 28
+        },
+        "MEDIUM": {
+          "precision": 0.4,
+          "recall": 0.375,
+          "f1": 0.3871,
+          "support": 16
+        },
+        "SMALL": {
+          "precision": 0.3478,
+          "recall": 0.381,
+          "f1": 0.3636,
+          "support": 21
+        }
+      },
+      "legacy_confusion_matrix": [
+        [
+          8,
+          9,
+          11
+        ],
+        [
+          6,
+          6,
+          4
+        ],
+        [
+          13,
+          0,
+          8
+        ]
+      ],
+      "legacy_confusion_matrix_labels": [
+        "LARGE",
+        "MEDIUM",
+        "SMALL"
+      ]
+    },
+    "false_small_risk": {
+      "large_queries_total": 28,
+      "classifier_false_small_count": 13,
+      "classifier_false_small_rate_pct": 46.43,
+      "router_false_small_count": 7,
+      "router_false_small_rate_pct": 25.0,
+      "legacy_false_small_count": 11,
+      "legacy_false_small_rate_pct": 39.29
+    },
+    "false_large_risk": {
+      "small_queries_total": 21,
+      "classifier_false_large_count": 13,
+      "classifier_false_large_rate_pct": 61.9,
+      "router_false_large_count": 13,
+      "router_false_large_rate_pct": 61.9,
+      "legacy_false_large_count": 13,
+      "legacy_false_large_rate_pct": 61.9
+    }
+  },
+  "escalation_summary": {
+    "total_escalations": 20,
+    "total_escalation_pct": 19.23,
+    "defensible_escalations": 8,
+    "defensible_escalation_pct": 12.31,
+    "non_defensible_escalations": 12,
+    "non_defensible_escalation_pct": 30.77
+  },
+  "case_type_breakdown": {
+    "paraphrase_uncommon_wording": {
+      "count": 13,
+      "has_defensible_ground_truth": true,
+      "classifier_tier_distribution": {
+        "SMALL": 9,
+        "MEDIUM": 4
+      },
+      "router_tier_distribution": {
+        "MEDIUM": 7,
+        "SMALL": 5,
+        "LARGE": 1
+      },
+      "escalation_count": 4,
+      "escalation_pct": 30.77,
+      "mean_classifier_confidence": 0.7148,
+      "min_classifier_confidence": 0.4488,
+      "max_classifier_confidence": 0.985,
+      "classifier_accuracy": 0.4615,
+      "router_accuracy": 0.6923,
+      "ground_truth_distribution": {
+        "MEDIUM": 5,
+        "SMALL": 4,
+        "LARGE": 4
+      }
+    },
+    "unusual_syntax_vocabulary": {
+      "count": 13,
+      "has_defensible_ground_truth": true,
+      "classifier_tier_distribution": {
+        "SMALL": 10,
+        "MEDIUM": 3
+      },
+      "router_tier_distribution": {
+        "SMALL": 7,
+        "MEDIUM": 3,
+        "LARGE": 3
+      },
+      "escalation_count": 3,
+      "escalation_pct": 23.08,
+      "mean_classifier_confidence": 0.7012,
+      "min_classifier_confidence": 0.4354,
+      "max_classifier_confidence": 0.9096,
+      "classifier_accuracy": 0.5385,
+      "router_accuracy": 0.7692,
+      "ground_truth_distribution": {
+        "MEDIUM": 5,
+        "SMALL": 4,
+        "LARGE": 4
+      }
+    },
+    "ambiguous_missing_context": {
+      "count": 13,
+      "has_defensible_ground_truth": false,
+      "classifier_tier_distribution": {
+        "SMALL": 11,
+        "MEDIUM": 2
+      },
+      "router_tier_distribution": {
+        "SMALL": 11,
+        "MEDIUM": 2
+      },
+      "escalation_count": 0,
+      "escalation_pct": 0.0,
+      "mean_classifier_confidence": 0.7477,
+      "min_classifier_confidence": 0.5176,
+      "max_classifier_confidence": 0.9357,
+      "safe_routing_adherence_count": 2,
+      "safe_routing_adherence_pct": 15.38
+    },
+    "complex_no_keywords": {
+      "count": 13,
+      "has_defensible_ground_truth": true,
+      "classifier_tier_distribution": {
+        "LARGE": 12,
+        "MEDIUM": 1
+      },
+      "router_tier_distribution": {
+        "LARGE": 12,
+        "MEDIUM": 1
+      },
+      "escalation_count": 0,
+      "escalation_pct": 0.0,
+      "mean_classifier_confidence": 0.9483,
+      "min_classifier_confidence": 0.8342,
+      "max_classifier_confidence": 1.0,
+      "classifier_accuracy": 0.6154,
+      "router_accuracy": 0.6154,
+      "ground_truth_distribution": {
+        "LARGE": 7,
+        "MEDIUM": 6
+      }
+    },
+    "empty_whitespace": {
+      "count": 12,
+      "has_defensible_ground_truth": false,
+      "classifier_tier_distribution": {
+        "SMALL": 12
+      },
+      "router_tier_distribution": {
+        "MEDIUM": 12
+      },
+      "escalation_count": 12,
+      "escalation_pct": 100.0,
+      "mean_classifier_confidence": 0.856,
+      "min_classifier_confidence": 0.8441,
+      "max_classifier_confidence": 0.8603,
+      "safe_routing_adherence_count": 12,
+      "safe_routing_adherence_pct": 100.0
+    },
+    "nonsense_random_tokens": {
+      "count": 14,
+      "has_defensible_ground_truth": false,
+      "classifier_tier_distribution": {
+        "SMALL": 12,
+        "MEDIUM": 1,
+        "LARGE": 1
+      },
+      "router_tier_distribution": {
+        "SMALL": 12,
+        "MEDIUM": 1,
+        "LARGE": 1
+      },
+      "escalation_count": 0,
+      "escalation_pct": 0.0,
+      "mean_classifier_confidence": 0.8079,
+      "min_classifier_confidence": 0.5073,
+      "max_classifier_confidence": 0.8571,
+      "safe_routing_adherence_count": 1,
+      "safe_routing_adherence_pct": 7.14
+    },
+    "short_difficult": {
+      "count": 13,
+      "has_defensible_ground_truth": true,
+      "classifier_tier_distribution": {
+        "SMALL": 7,
+        "MEDIUM": 6
+      },
+      "router_tier_distribution": {
+        "MEDIUM": 6,
+        "SMALL": 6,
+        "LARGE": 1
+      },
+      "escalation_count": 1,
+      "escalation_pct": 7.69,
+      "mean_classifier_confidence": 0.6678,
+      "min_classifier_confidence": 0.4651,
+      "max_classifier_confidence": 0.9,
+      "classifier_accuracy": 0.0,
+      "router_accuracy": 0.0769,
+      "ground_truth_distribution": {
+        "LARGE": 13
+      }
+    },
+    "long_simple": {
+      "count": 13,
+      "has_defensible_ground_truth": true,
+      "classifier_tier_distribution": {
+        "LARGE": 13
+      },
+      "router_tier_distribution": {
+        "LARGE": 13
+      },
+      "escalation_count": 0,
+      "escalation_pct": 0.0,
+      "mean_classifier_confidence": 0.9946,
+      "min_classifier_confidence": 0.9418,
+      "max_classifier_confidence": 1.0,
+      "classifier_accuracy": 0.0,
+      "router_accuracy": 0.0,
+      "ground_truth_distribution": {
+        "SMALL": 13
+      }
+    }
+  },
+  "high_confidence_failures_on_valid_tasks": [
+    {
+      "id": "ROB-013",
+      "query": "Deconstruct the zero-knowledge argument construction in Groth16 and detail ...",
+      "case_type": "paraphrase_uncommon_wording",
+      "ground_truth": "LARGE",
+      "predicted": "MEDIUM",
+      "router_selected": "MEDIUM",
+      "confidence": 0.9233
+    },
+    {
+      "id": "ROB-047",
+      "query": "A machine learning pipeline trains a classifier where 99.5% of labels are n...",
+      "case_type": "complex_no_keywords",
+      "ground_truth": "MEDIUM",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 1.0
+    },
+    {
+      "id": "ROB-048",
+      "query": "A recursive function computes Fibonacci numbers in exponential time due to ...",
+      "case_type": "complex_no_keywords",
+      "ground_truth": "MEDIUM",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9431
+    },
+    {
+      "id": "ROB-049",
+      "query": "A microservice returns HTTP 504 Gateway Timeout only when upstream traffic ...",
+      "case_type": "complex_no_keywords",
+      "ground_truth": "MEDIUM",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9755
+    },
+    {
+      "id": "ROB-050",
+      "query": "Given a collection of intervals on a timeline, merge all overlapping ranges...",
+      "case_type": "complex_no_keywords",
+      "ground_truth": "MEDIUM",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.903
+    },
+    {
+      "id": "ROB-051",
+      "query": "A neural model produces high training loss that fluctuates wildly between b...",
+      "case_type": "complex_no_keywords",
+      "ground_truth": "MEDIUM",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9518
+    },
+    {
+      "id": "ROB-081",
+      "query": "Is Chaitin's constant Omega computable?",
+      "case_type": "short_difficult",
+      "ground_truth": "LARGE",
+      "predicted": "SMALL",
+      "router_selected": "SMALL",
+      "confidence": 0.9
+    },
+    {
+      "id": "ROB-084",
+      "query": "Construct a non-measurable set of real numbers.",
+      "case_type": "short_difficult",
+      "ground_truth": "LARGE",
+      "predicted": "SMALL",
+      "router_selected": "SMALL",
+      "confidence": 0.8338
+    },
+    {
+      "id": "ROB-086",
+      "query": "Does ZFC have a transitive model?",
+      "case_type": "short_difficult",
+      "ground_truth": "LARGE",
+      "predicted": "SMALL",
+      "router_selected": "SMALL",
+      "confidence": 0.8304
+    },
+    {
+      "id": "ROB-089",
+      "query": "Is the Collatz conjecture decidable?",
+      "case_type": "short_difficult",
+      "ground_truth": "LARGE",
+      "predicted": "SMALL",
+      "router_selected": "SMALL",
+      "confidence": 0.8247
+    },
+    {
+      "id": "ROB-092",
+      "query": "Hello there friendly virtual assistant! I was sitting in my living room yes...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 1.0
+    },
+    {
+      "id": "ROB-093",
+      "query": "I hope you are doing well today. My eight-year-old child just came home fro...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 1.0
+    },
+    {
+      "id": "ROB-094",
+      "query": "Throughout the late twentieth century, space exploration represented one of...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9996
+    },
+    {
+      "id": "ROB-095",
+      "query": "I am putting together a general trivia night contest for my local community...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9991
+    },
+    {
+      "id": "ROB-096",
+      "query": "While browsing the internet and reading articles about personal computer ha...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9992
+    },
+    {
+      "id": "ROB-097",
+      "query": "Good morning assistant! I am currently making my weekly grocery shopping li...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 1.0
+    },
+    {
+      "id": "ROB-098",
+      "query": "In our seventh-grade social studies curriculum, we are currently learning a...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 1.0
+    },
+    {
+      "id": "ROB-099",
+      "query": "Hello! I am reading a historical fiction novel set during the Renaissance i...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9999
+    },
+    {
+      "id": "ROB-100",
+      "query": "I am working on a simple crossword puzzle in the Sunday morning newspaper a...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9911
+    },
+    {
+      "id": "ROB-101",
+      "query": "My friend and I were having a friendly debate over lunch about classic Engl...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9999
+    },
+    {
+      "id": "ROB-102",
+      "query": "While looking up basic astronomical facts about our solar system for an int...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9989
+    },
+    {
+      "id": "ROB-103",
+      "query": "I am setting up a basic home network router and reading through the manufac...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9997
+    },
+    {
+      "id": "ROB-104",
+      "query": "Can you please tell me in one short word or number how many distinct days a...",
+      "case_type": "long_simple",
+      "ground_truth": "SMALL",
+      "predicted": "LARGE",
+      "router_selected": "LARGE",
+      "confidence": 0.9418
+    }
+  ],
+  "high_confidence_predictions_on_garbage": [
+    {
+      "id": "ROB-027",
+      "query": "'Fix the bug.'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.8166,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-028",
+      "query": "'Make it faster.'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.8143,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-029",
+      "query": "'Which one is better?'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.9357,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-030",
+      "query": "'Write the test.'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.7773,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-031",
+      "query": "'Is this secure?'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.8786,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-032",
+      "query": "'Process the data.'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.8346,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-034",
+      "query": "'Deploy it.'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.8158,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-035",
+      "query": "'What went wrong here?'",
+      "case_type": "ambiguous_missing_context",
+      "predicted": "SMALL",
+      "confidence": 0.9209,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-053",
+      "query": "''",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8603,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-054",
+      "query": "' '",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8593,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-055",
+      "query": "'   '",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8573,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-056",
+      "query": "'\\t'",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8593,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-057",
+      "query": "'\\t\\t\\t'",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8573,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-058",
+      "query": "'\\n'",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8593,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-059",
+      "query": "'\\n\\n\\n'",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8573,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-060",
+      "query": "'\\r\\n'",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8583,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-061",
+      "query": "'\\r\\n\\r\\n'",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8563,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-062",
+      "query": "'   \\t   \\n   '",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8488,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-063",
+      "query": "'\\t \\r\\n \\t'",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8542,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-064",
+      "query": "'               '",
+      "case_type": "empty_whitespace",
+      "predicted": "SMALL",
+      "confidence": 0.8441,
+      "router_selected": "MEDIUM"
+    },
+    {
+      "id": "ROB-065",
+      "query": "'asdfghjkl qwertyuiop'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8461,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-066",
+      "query": "'zxcvbnmpoiuytrewqasdfghjkl'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.834,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-067",
+      "query": "'a8f23bc99401fe37b12d5930e44'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8326,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-068",
+      "query": "'...???!!!;;;---:::***'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8407,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-069",
+      "query": "'flibber gibber wobber gloop trazzle plink'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8329,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-070",
+      "query": "'the of and to a in that is was he for it with as his on be a'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8474,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-071",
+      "query": "'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8115,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-072",
+      "query": "'1234567890 0987654321 5555555555'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8339,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-073",
+      "query": "'blorp zazzle quux fribble snark'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8439,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-074",
+      "query": "'/// \\\\\\\\\\\\ &&& %%% $$$ ### @@@'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8571,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-075",
+      "query": "'xkcd 99482 jfkldsa; 3910398 !!'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8452,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-077",
+      "query": "'null undefined NaN void 0 [object Object]'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "SMALL",
+      "confidence": 0.8372,
+      "router_selected": "SMALL"
+    },
+    {
+      "id": "ROB-078",
+      "query": "'!@#$%^&*()_+=-`~[]{}|;\\':\",./<>?'",
+      "case_type": "nonsense_random_tokens",
+      "predicted": "LARGE",
+      "confidence": 0.7401,
+      "router_selected": "LARGE"
+    }
+  ]
+}

@@ -1,0 +1,616 @@
+[
+  {
+    "id": "fact_01",
+    "category": "factual",
+    "prompt": "What is the deepest oceanic trench in the world?",
+    "reference_answer": "Mariana Trench",
+    "eval_type": "factual_match",
+    "source": "Natural Questions",
+    "license": "CC-BY-3.0",
+    "metadata": {
+      "aliases": ["Mariana", "Marianas Trench", "Challenger Deep"]
+    }
+  },
+  {
+    "id": "fact_02",
+    "category": "factual",
+    "prompt": "In what year did Apollo 11 land the first humans on the Moon?",
+    "reference_answer": "1969",
+    "eval_type": "factual_match",
+    "source": "SQuAD 2.0",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "aliases": ["1969", "July 1969"]
+    }
+  },
+  {
+    "id": "fact_03",
+    "category": "factual",
+    "prompt": "What is the capital city of New Zealand?",
+    "reference_answer": "Wellington",
+    "eval_type": "factual_match",
+    "source": "Natural Questions",
+    "license": "CC-BY-3.0",
+    "metadata": {
+      "aliases": ["Wellington"]
+    }
+  },
+  {
+    "id": "fact_04",
+    "category": "factual",
+    "prompt": "Who discovered penicillin in 1928?",
+    "reference_answer": "Alexander Fleming",
+    "eval_type": "factual_match",
+    "source": "SQuAD 2.0",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "aliases": ["Alexander Fleming", "Fleming", "Sir Alexander Fleming"]
+    }
+  },
+  {
+    "id": "fact_05",
+    "category": "factual",
+    "prompt": "What is the chemical element with the atomic number 1?",
+    "reference_answer": "Hydrogen",
+    "eval_type": "factual_match",
+    "source": "SQuAD 2.0",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "aliases": ["Hydrogen", "H"]
+    }
+  },
+  {
+    "id": "fact_06",
+    "category": "factual",
+    "prompt": "Which planet in our solar system has the most confirmed moons?",
+    "reference_answer": "Saturn",
+    "eval_type": "factual_match",
+    "source": "Natural Questions",
+    "license": "CC-BY-3.0",
+    "metadata": {
+      "aliases": ["Saturn"]
+    }
+  },
+  {
+    "id": "fact_07",
+    "category": "factual",
+    "prompt": "Who wrote the fantasy novel 'The Hobbit'?",
+    "reference_answer": "J.R.R. Tolkien",
+    "eval_type": "factual_match",
+    "source": "Natural Questions",
+    "license": "CC-BY-3.0",
+    "metadata": {
+      "aliases": ["Tolkien", "J. R. R. Tolkien", "John Ronald Reuel Tolkien"]
+    }
+  },
+  {
+    "id": "fact_08",
+    "category": "factual",
+    "prompt": "What is the main structural protein found in animal skin and connective tissue?",
+    "reference_answer": "Collagen",
+    "eval_type": "factual_match",
+    "source": "SQuAD 2.0",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "aliases": ["Collagen"]
+    }
+  },
+  {
+    "id": "fact_09",
+    "category": "factual",
+    "prompt": "In computer networking, what does the acronym DHCP stand for?",
+    "reference_answer": "Dynamic Host Configuration Protocol",
+    "eval_type": "factual_match",
+    "source": "SQuAD 2.0",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "aliases": ["Dynamic Host Configuration Protocol"]
+    }
+  },
+  {
+    "id": "fact_10",
+    "category": "factual",
+    "prompt": "Which country hosted the 2016 Summer Olympic Games?",
+    "reference_answer": "Brazil",
+    "eval_type": "factual_match",
+    "source": "SQuAD 2.0",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "aliases": ["Brazil", "Rio de Janeiro"]
+    }
+  },
+
+  {
+    "id": "reason_01",
+    "category": "reasoning",
+    "prompt": "If all bloops are razzies and all razzies are lazzies, are all bloops definitely lazzies? Answer yes or no and explain.",
+    "reference_answer": "Yes. By the transitive property of set inclusion, if bloops are a subset of razzies, and razzies are a subset of lazzies, then all bloops must be lazzies.",
+    "eval_type": "reasoning_choice",
+    "source": "LogiQA",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "expected_decision": "yes",
+      "required_concept": "transitive"
+    }
+  },
+  {
+    "id": "reason_02",
+    "category": "reasoning",
+    "prompt": "A farmer must cross a river with a wolf, a goat, and a cabbage in a boat that can only carry the farmer and one item. If left alone, the goat eats the cabbage and the wolf eats the goat. What item must the farmer take across first?",
+    "reference_answer": "The goat",
+    "eval_type": "reasoning_choice",
+    "source": "StrategyQA",
+    "license": "Apache-2.0",
+    "metadata": {
+      "expected_decision": "goat",
+      "required_concept": "goat"
+    }
+  },
+  {
+    "id": "reason_03",
+    "category": "reasoning",
+    "prompt": "Which material is better suited to conduct electricity safely in a power cable: a copper wire or a rubber hose? Explain why.",
+    "reference_answer": "A copper wire, because copper has free valence electrons that allow electric current to flow with low resistance, whereas rubber is an electrical insulator.",
+    "eval_type": "reasoning_choice",
+    "source": "ARC Challenge",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "expected_decision": "copper",
+      "required_concept": "insulator"
+    }
+  },
+  {
+    "id": "reason_04",
+    "category": "reasoning",
+    "prompt": "An astronomer observes that spectral absorption lines from a distant galaxy are redshifted. What does this indicate about the galaxy's relative motion to Earth?",
+    "reference_answer": "The galaxy is moving away from Earth due to cosmic expansion.",
+    "eval_type": "reasoning_choice",
+    "source": "ARC Challenge",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "expected_decision": "away",
+      "required_concept": "receding"
+    }
+  },
+  {
+    "id": "reason_05",
+    "category": "reasoning",
+    "prompt": "If today is Tuesday, what day of the week will it be in 100 days? Show the modular calculation.",
+    "reference_answer": "Thursday. 100 divided by 7 leaves a remainder of 2 (100 = 14 * 7 + 2). Moving 2 days forward from Tuesday gives Thursday.",
+    "eval_type": "reasoning_choice",
+    "source": "StrategyQA",
+    "license": "Apache-2.0",
+    "metadata": {
+      "expected_decision": "thursday",
+      "required_concept": "remainder"
+    }
+  },
+  {
+    "id": "reason_06",
+    "category": "reasoning",
+    "prompt": "Why does water expand when it freezes into ice, whereas most other substances contract upon solidification?",
+    "reference_answer": "Hydrogen bonding causes water molecules to align in a rigid hexagonal crystalline lattice that creates more empty space between molecules than in liquid water.",
+    "eval_type": "reasoning_choice",
+    "source": "ARC Challenge",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "expected_decision": "hydrogen bond",
+      "required_concept": "crystal lattice"
+    }
+  },
+  {
+    "id": "reason_07",
+    "category": "reasoning",
+    "prompt": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost in cents?",
+    "reference_answer": "5 cents ($0.05). If ball = x, bat = x + 1.00. Then 2x + 1.00 = 1.10, so 2x = 0.10, which means x = 0.05.",
+    "eval_type": "reasoning_choice",
+    "source": "Cognitive Reflection Test",
+    "license": "Apache-2.0",
+    "metadata": {
+      "expected_decision": "5",
+      "required_concept": "0.05"
+    }
+  },
+  {
+    "id": "reason_08",
+    "category": "reasoning",
+    "prompt": "If an algorithm has an asymptotic time complexity of O(N^2), by what factor does its runtime increase when the input size N is doubled to 2N?",
+    "reference_answer": "A factor of 4. Since (2N)^2 = 4N^2, the runtime quadruples.",
+    "eval_type": "reasoning_choice",
+    "source": "Algorithm Reasoning",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "expected_decision": "4",
+      "required_concept": "quadruple"
+    }
+  },
+  {
+    "id": "reason_09",
+    "category": "reasoning",
+    "prompt": "What primarily causes the progression of astronomical seasons on Earth?",
+    "reference_answer": "The tilt of Earth's rotational axis (approximately 23.5 degrees) relative to its orbital plane around the Sun causes varying angles of incident solar radiation throughout the year.",
+    "eval_type": "reasoning_choice",
+    "source": "ARC Challenge",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "expected_decision": "tilt",
+      "required_concept": "axis"
+    }
+  },
+  {
+    "id": "reason_10",
+    "category": "reasoning",
+    "prompt": "In a randomly selected group of 30 people, is the probability that at least two share a birthday less than 50% or greater than 50%?",
+    "reference_answer": "Greater than 50%. Due to the birthday problem paradox, the probability of a shared birthday reaches approximately 70.6% with 30 individuals.",
+    "eval_type": "reasoning_choice",
+    "source": "StrategyQA",
+    "license": "Apache-2.0",
+    "metadata": {
+      "expected_decision": "greater",
+      "required_concept": "birthday"
+    }
+  },
+
+  {
+    "id": "math_01",
+    "category": "mathematics",
+    "prompt": "Natalia sold clips to 48 of her friends in April, and then she sold half as many clips in May. How many clips did Natalia sell altogether in April and May?",
+    "reference_answer": "72",
+    "eval_type": "math_numeric",
+    "source": "GSM8K",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 72
+    }
+  },
+  {
+    "id": "math_02",
+    "category": "mathematics",
+    "prompt": "Weng earns $12 an hour for babysitting. Yesterday, she worked for 50 minutes. How much did she earn in dollars?",
+    "reference_answer": "10",
+    "eval_type": "math_numeric",
+    "source": "GSM8K",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 10
+    }
+  },
+  {
+    "id": "math_03",
+    "category": "mathematics",
+    "prompt": "Betty is saving money for a new wallet which costs $100. Betty has half of the money she needs. Her parents gave her $15 and her grandparents gave her twice as much as her parents. How much more money does Betty need to buy the wallet?",
+    "reference_answer": "5",
+    "eval_type": "math_numeric",
+    "source": "GSM8K",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 5
+    }
+  },
+  {
+    "id": "math_04",
+    "category": "mathematics",
+    "prompt": "A robe takes 2 bolts of blue fiber and half that much white fiber. How many bolts of fiber in total does it take to make 150 robes?",
+    "reference_answer": "450",
+    "eval_type": "math_numeric",
+    "source": "GSM8K",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 450
+    }
+  },
+  {
+    "id": "math_05",
+    "category": "mathematics",
+    "prompt": "Josh buys a house for $80,000 and spends $50,000 on repairs. If he sells the house for $150,000, what is his net profit in dollars?",
+    "reference_answer": "20000",
+    "eval_type": "math_numeric",
+    "source": "GSM8K",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 20000
+    }
+  },
+  {
+    "id": "math_06",
+    "category": "mathematics",
+    "prompt": "James writes a 3-page letter to 2 different friends twice a week. How many total pages does he write in one week?",
+    "reference_answer": "12",
+    "eval_type": "math_numeric",
+    "source": "GSM8K",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 12
+    }
+  },
+  {
+    "id": "math_07",
+    "category": "mathematics",
+    "prompt": "Mark has a garden with 10 rows of flowers and 5 flowers in each row. If 15 flowers wilt and die, how many healthy flowers remain?",
+    "reference_answer": "35",
+    "eval_type": "math_numeric",
+    "source": "GSM8K",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 35
+    }
+  },
+  {
+    "id": "math_08",
+    "category": "mathematics",
+    "prompt": "Compute the numerical derivative of f(x) = 3*x^4 - 5*x^2 + 7 evaluated at x = 2.",
+    "reference_answer": "76",
+    "eval_type": "math_numeric",
+    "source": "Calculus QA",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 76
+    }
+  },
+  {
+    "id": "math_09",
+    "category": "mathematics",
+    "prompt": "What is the area in square centimeters of a right triangle with base 8 cm and hypotenuse 10 cm?",
+    "reference_answer": "24",
+    "eval_type": "math_numeric",
+    "source": "Geometry QA",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 24
+    }
+  },
+  {
+    "id": "math_10",
+    "category": "mathematics",
+    "prompt": "Solve for x in the linear equation: 3*x + 15 = 2*(x + 12). What is the value of x?",
+    "reference_answer": "9",
+    "eval_type": "math_numeric",
+    "source": "Algebra QA",
+    "license": "MIT",
+    "metadata": {
+      "numeric_target": 9
+    }
+  },
+
+  {
+    "id": "code_01",
+    "category": "coding",
+    "prompt": "Write a Python function `has_close_elements(numbers: list, threshold: float) -> bool` that returns True if any two elements in the list are closer to each other than the given threshold.",
+    "reference_answer": "def has_close_elements(numbers: list, threshold: float) -> bool:\n    for i in range(len(numbers)):\n        for j in range(i + 1, len(numbers)):\n            if abs(numbers[i] - numbers[j]) < threshold:\n                return True\n    return False",
+    "eval_type": "code_eval",
+    "source": "HumanEval/0",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "has_close_elements"
+    }
+  },
+  {
+    "id": "code_02",
+    "category": "coding",
+    "prompt": "Write a Python function `separate_paren_groups(paren_string: str) -> list` that accepts a string containing multiple groups of nested parentheses and returns a list of separate balanced parenthesized strings.",
+    "reference_answer": "def separate_paren_groups(paren_string: str) -> list:\n    result = []\n    current = []\n    depth = 0\n    for char in paren_string:\n        if char == '(':\n            depth += 1\n            current.append(char)\n        elif char == ')':\n            depth -= 1\n            current.append(char)\n            if depth == 0:\n                result.append(''.join(current))\n                current = []\n    return result",
+    "eval_type": "code_eval",
+    "source": "HumanEval/1",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "separate_paren_groups"
+    }
+  },
+  {
+    "id": "code_03",
+    "category": "coding",
+    "prompt": "Write a Python function `truncate_number(number: float) -> float` that decomposes a positive floating point number into its integer and decimal parts, returning only the decimal fraction.",
+    "reference_answer": "def truncate_number(number: float) -> float:\n    return number % 1.0",
+    "eval_type": "code_eval",
+    "source": "HumanEval/2",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "truncate_number"
+    }
+  },
+  {
+    "id": "code_04",
+    "category": "coding",
+    "prompt": "Write a Python function `below_zero(operations: list) -> bool` that takes a list of deposit and withdrawal bank operations starting from a balance of zero, returning True if the balance ever falls below zero at any point.",
+    "reference_answer": "def below_zero(operations: list) -> bool:\n    balance = 0\n    for op in operations:\n        balance += op\n        if balance < 0:\n            return True\n    return False",
+    "eval_type": "code_eval",
+    "source": "HumanEval/3",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "below_zero"
+    }
+  },
+  {
+    "id": "code_05",
+    "category": "coding",
+    "prompt": "Write a Python function `mean_absolute_deviation(numbers: list) -> float` that calculates the mean absolute deviation around the mean for a list of floating point values.",
+    "reference_answer": "def mean_absolute_deviation(numbers: list) -> float:\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)",
+    "eval_type": "code_eval",
+    "source": "HumanEval/4",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "mean_absolute_deviation"
+    }
+  },
+  {
+    "id": "code_06",
+    "category": "coding",
+    "prompt": "Write a Python function `intersperse(numbers: list, delimiter: int) -> list` that inserts the integer delimiter between every two consecutive elements of the input list.",
+    "reference_answer": "def intersperse(numbers: list, delimiter: int) -> list:\n    if not numbers:\n        return []\n    res = []\n    for n in numbers[:-1]:\n        res.extend([n, delimiter])\n    res.append(numbers[-1])\n    return res",
+    "eval_type": "code_eval",
+    "source": "HumanEval/5",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "intersperse"
+    }
+  },
+  {
+    "id": "code_07",
+    "category": "coding",
+    "prompt": "Write a Python function `filter_by_substring(strings: list, substring: str) -> list` that filters a list of strings, returning only those elements containing the given substring.",
+    "reference_answer": "def filter_by_substring(strings: list, substring: str) -> list:\n    return [s for s in strings if substring in s]",
+    "eval_type": "code_eval",
+    "source": "HumanEval/7",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "filter_by_substring"
+    }
+  },
+  {
+    "id": "code_08",
+    "category": "coding",
+    "prompt": "Write a Python function `sum_squares(numbers: list) -> int` that takes a list of integers and returns the sum of each number squared.",
+    "reference_answer": "def sum_squares(numbers: list) -> int:\n    return sum(x * x for x in numbers)",
+    "eval_type": "code_eval",
+    "source": "MBPP/228",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "function_name": "sum_squares"
+    }
+  },
+  {
+    "id": "code_09",
+    "category": "coding",
+    "prompt": "Write a Python function `is_palindrome(s: str) -> bool` that checks if a string is a palindrome, ignoring all non-alphanumeric characters and letter casing.",
+    "reference_answer": "def is_palindrome(s: str) -> bool:\n    cleaned = [c.lower() for c in s if c.isalnum()]\n    return cleaned == cleaned[::-1]",
+    "eval_type": "code_eval",
+    "source": "MBPP/310",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "function_name": "is_palindrome"
+    }
+  },
+  {
+    "id": "code_10",
+    "category": "coding",
+    "prompt": "Write a Python function `find_max_subsequence_sum(nums: list) -> int` implementing Kadane's algorithm to find the maximum sum of a contiguous subarray.",
+    "reference_answer": "def find_max_subsequence_sum(nums: list) -> int:\n    max_so_far = nums[0]\n    curr_max = nums[0]\n    for x in nums[1:]:\n        curr_max = max(x, curr_max + x)\n        max_so_far = max(max_so_far, curr_max)\n    return max_so_far",
+    "eval_type": "code_eval",
+    "source": "Algorithms/Kadane",
+    "license": "MIT",
+    "metadata": {
+      "function_name": "find_max_subsequence_sum"
+    }
+  },
+
+  {
+    "id": "sum_01",
+    "category": "summarization",
+    "prompt": "Summarize the following passage into 2 concise sentences:\nScientists at the National Renewable Energy Laboratory have developed a perovskite solar cell that maintains 90 percent of its initial efficiency after 1,000 hours of continuous accelerated testing under elevated temperatures. Traditional silicon solar cells, while reliable, are energy-intensive to manufacture, whereas perovskites can be printed from liquid inks at low temperatures, significantly reducing production energy and cost.",
+    "reference_answer": "Researchers at the National Renewable Energy Laboratory engineered a perovskite solar cell retaining 90% efficiency after 1,000 hours of accelerated testing. Unlike energy-intensive silicon cells, perovskites can be manufactured from low-temperature liquid inks to drastically reduce production costs.",
+    "eval_type": "summary_overlap",
+    "source": "CNN/DailyMail",
+    "license": "Apache-2.0",
+    "metadata": {
+      "keywords": ["perovskite", "efficiency", "silicon", "cost", "energy"]
+    }
+  },
+  {
+    "id": "sum_02",
+    "category": "summarization",
+    "prompt": "Summarize the following corporate financial update into concise bullet points:\nGlobal Logistics Corp reported third-quarter revenue of $14.2 billion, an increase of 6% year-over-year, driven by resilient maritime freight demand. Operating income declined 4% to $1.1 billion due to higher port congestion surcharges and increased wage settlements across European hubs. Management raised full-year capital expenditure guidance to $2.4 billion to accelerate port automation initiatives.",
+    "reference_answer": "- Q3 revenue grew 6% year-over-year to $14.2 billion on steady maritime freight volume.\n- Operating income dropped 4% to $1.1 billion due to port surcharges and wage increases in Europe.\n- Full-year capital expenditure guidance was elevated to $2.4 billion for port automation projects.",
+    "eval_type": "summary_overlap",
+    "source": "CNN/DailyMail",
+    "license": "Apache-2.0",
+    "metadata": {
+      "keywords": ["revenue", "freight", "operating income", "automation", "capital expenditure"]
+    }
+  },
+  {
+    "id": "sum_03",
+    "category": "summarization",
+    "prompt": "Summarize this medical trial report into 2 sentences:\nIn a double-blind randomized clinical trial of 1,200 participants with moderate hypertension, once-daily administration of Compound X-7 reduced systolic blood pressure by an average of 14.2 mmHg over 12 weeks, compared with 4.1 mmHg in the placebo group. Adverse events were mild, with dizziness reported in 3.2% of the active cohort versus 2.8% for placebo, with zero treatment-related withdrawals.",
+    "reference_answer": "A randomized trial of 1,200 patients showed that once-daily Compound X-7 lowered systolic blood pressure by 14.2 mmHg over 12 weeks compared to 4.1 mmHg for placebo. Side effects were minimal, with dizziness in 3.2% of patients and no treatment discontinuations.",
+    "eval_type": "summary_overlap",
+    "source": "BioASQ",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "keywords": ["hypertension", "systolic", "blood pressure", "placebo", "adverse"]
+    }
+  },
+  {
+    "id": "sum_04",
+    "category": "summarization",
+    "prompt": "Summarize the historical significance of the printing press into 2 sentences:\nJohannes Gutenberg invented the movable-type mechanical printing press around 1440 in Mainz, Germany. This innovation dramatically accelerated the dissemination of scientific treatises, literature, and religious texts throughout Renaissance Europe, transforming literacy rates and democratizing knowledge distribution.",
+    "reference_answer": "Johannes Gutenberg developed the movable-type mechanical printing press in Mainz around 1440. The invention revolutionized literacy across Renaissance Europe by democratizing the spread of scientific, religious, and literary works.",
+    "eval_type": "summary_overlap",
+    "source": "SQuAD 2.0",
+    "license": "CC-BY-SA-4.0",
+    "metadata": {
+      "keywords": ["gutenberg", "printing press", "literacy", "knowledge", "europe"]
+    }
+  },
+  {
+    "id": "sum_05",
+    "category": "summarization",
+    "prompt": "Summarize the cloud outage incident analysis into 2 sentences:\nAn automated configuration update corrupted border gateway protocol routing tables across three primary availability zones, causing a 42-minute global service disruption. Automated failover was impeded because internal resolution dependencies were co-located within the partitioned network segment, requiring manual console interventions to restore operational traffic.",
+    "reference_answer": "A faulty configuration update broke BGP routing tables across three availability zones, triggering a 42-minute global outage. Automated recovery failed due to internal network dependencies, requiring manual out-of-band console access to restore services.",
+    "eval_type": "summary_overlap",
+    "source": "Engineering Incident Reports",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "keywords": ["bgp", "routing", "outage", "failover", "network"]
+    }
+  },
+  {
+    "id": "sum_06",
+    "category": "summarization",
+    "prompt": "Summarize the carbon policy brief in 2 sentences:\nThe European Union's Carbon Border Adjustment Mechanism (CBAM) imposes an import tariff on energy-intensive goods like steel and cement corresponding to their embedded carbon emissions. The regulation aims to equalize carbon pricing between domestic European manufacturers and foreign producers to prevent industrial carbon leakage to territories with lax environmental standards.",
+    "reference_answer": "The EU's Carbon Border Adjustment Mechanism levies emissions tariffs on imported goods such as steel and cement. This policy balances carbon compliance costs between domestic and foreign producers to deter carbon leakage to less regulated markets.",
+    "eval_type": "summary_overlap",
+    "source": "EU Policy Brief",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "keywords": ["carbon", "tariff", "cbam", "emissions", "leakage"]
+    }
+  },
+  {
+    "id": "sum_07",
+    "category": "summarization",
+    "prompt": "Summarize the archaeological discovery report in 2 sentences:\nArchaeologists in southern Egypt discovered an intact 3,500-year-old cemetery containing painted anthropoid coffins and papyrus administrative rolls from the New Kingdom era. The excavated scrolls provide detailed records of provincial gold taxation and diplomatic trade routes connecting Thebes to regional settlements.",
+    "reference_answer": "Excavations in southern Egypt revealed an intact 3,500-year-old New Kingdom cemetery with painted coffins and administrative papyri. The historical documents record provincial taxation and gold trade corridors linked to ancient Thebes.",
+    "eval_type": "summary_overlap",
+    "source": "Archaeology Digest",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "keywords": ["egypt", "cemetery", "papyrus", "new kingdom", "taxation"]
+    }
+  },
+  {
+    "id": "sum_08",
+    "category": "summarization",
+    "prompt": "Summarize this neuroscience finding into 2 sentences:\nNeuroscientists studying cortical plasticity in adult primates observed that focused cognitive training triggers structural dendritic spine remodeling within 48 hours. These observations overturn longstanding beliefs that mature mammalian brain circuits are fixed, demonstrating that structural synaptic plasticity continues dynamically throughout adulthood.",
+    "reference_answer": "Cognitive training induced rapid dendritic spine remodeling in adult primates within 48 hours. This disproves previous theories that adult brain circuitry is rigid, demonstrating ongoing structural neuroplasticity in adulthood.",
+    "eval_type": "summary_overlap",
+    "source": "Neuroscience Research",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "keywords": ["dendritic", "spine", "plasticity", "primate", "synaptic"]
+    }
+  },
+  {
+    "id": "sum_09",
+    "category": "summarization",
+    "prompt": "Summarize this machine learning systems paper excerpt in 2 sentences:\nFlashAttention-3 leverages asynchronous hardware pipelines and fp8 quantization on modern tensor architectures to accelerate self-attention computation. The system achieves a 2.4x speedup over standard attention baselines while strictly preserving numerical output precision and gradient stability.",
+    "reference_answer": "FlashAttention-3 optimizes self-attention using asynchronous hardware pipelines and fp8 quantization on advanced GPU tensor cores. The method delivers a 2.4x speed improvement over baselines without compromising numerical accuracy or training stability.",
+    "eval_type": "summary_overlap",
+    "source": "arXiv AI Papers",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "keywords": ["flashattention", "speedup", "quantization", "tensor", "attention"]
+    }
+  },
+  {
+    "id": "sum_10",
+    "category": "summarization",
+    "prompt": "Summarize this climate and aviation investigation into 2 key points:\nAn investigation into atmospheric turbulence over the Pacific confirmed that clear-air turbulence encounters have increased by 41% since 1979 due to intensifying vertical wind shear in the jet stream. Safety analysts recommended installing forward-looking lidar systems on long-haul aircraft to identify severe shear zones before aircraft entry.",
+    "reference_answer": "Clear-air turbulence events over the Pacific have risen 41% since 1979 as climate-driven wind shear in the jet stream strengthens. Aviation analysts urge adopting forward-looking lidar technology on commercial airliners to detect turbulence zones in advance.",
+    "eval_type": "summary_overlap",
+    "source": "Aviation Safety",
+    "license": "CC-BY-4.0",
+    "metadata": {
+      "keywords": ["turbulence", "wind shear", "jet stream", "lidar", "aviation"]
+    }
+  }
+]
