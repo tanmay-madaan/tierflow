@@ -932,6 +932,117 @@ class T15_RobustnessEvaluationHarness(unittest.TestCase):
 
 
 # ═════════════════════════════════════════════════════════════════════════════
+class T16_DeploymentAndClassifierIntegrity(unittest.TestCase):
+    """T16 — Production deployment readiness, artifact verification, and API routing contracts."""
+
+    def test_fitted_classifier_loads_successfully(self):
+        """Production artifacts must load and verify as fitted estimators without error."""
+        mlc = MLClassifier()
+        self.assertIsNotNone(mlc.model, "Classifier model must not be None")
+        self.assertIsNotNone(mlc.vectorizer, "Vectorizer must not be None")
+        self.assertIsNotNone(mlc.scaler, "Scaler must not be None")
+        self.assertTrue(hasattr(mlc.vectorizer, "idf_"), "Vectorizer must have fitted idf_ attribute")
+        self.assertIsNotNone(mlc.vectorizer.idf_, "Vectorizer idf_ must not be None")
+
+        res = mlc.predict("What is the capital of France?")
+        self.assertIn("selected_model", res)
+        self.assertIn("confidence", res)
+        self.assertIn(res["selected_model"], {"SMALL", "MEDIUM", "LARGE"})
+
+    def test_reject_unfitted_vectorizer_gracefully(self):
+        """Loading an unfitted vectorizer must be caught during verification, triggering safe heuristic fallback."""
+        from sklearn.feature_extraction.text import TfidfVectorizer
+        from sklearn.linear_model import LogisticRegression
+        from sklearn.preprocessing import StandardScaler
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            tmp_path = Path(tmp_dir)
+            # Dump fitted model and scaler, but UN-FITTED vectorizer
+            unfitted_vec = TfidfVectorizer(max_features=500)
+            clf = LogisticRegression()
+            clf.fit([[0, 0], [1, 1]], ["SMALL", "LARGE"])
+            scaler = StandardScaler()
+            scaler.fit([[0, 0], [1, 1]])
+
+            joblib.dump(clf, tmp_path / "model.pkl")
+            joblib.dump(unfitted_vec, tmp_path / "vectorizer.pkl")
+            joblib.dump(scaler, tmp_path / "scaler.pkl")
+            with open(tmp_path / "metrics.json", "w") as f:
+                json.dump({"accuracy": 1.0}, f)
+
+            # Instantiation must detect missing idf_/unfitted state and fall back atomically
+            mlc = MLClassifier(model_dir=str(tmp_path))
+            self.assertIsNone(mlc.model, "Model must be None when vectorizer is unfitted")
+            self.assertIsNone(mlc.vectorizer, "Vectorizer must be None when unfitted")
+
+            # Predict must safely return heuristic without raising NotFittedError
+            pred = mlc.predict("Explain the difference between TCP and UDP.")
+            self.assertIn(pred["selected_model"], {"SMALL", "MEDIUM", "LARGE"})
+            self.assertEqual(pred["confidence"], 0.6)
+
+    def test_missing_model_artifacts_falls_back_to_heuristic(self):
+        """Missing artifact files must not crash initialization and must fall back gracefully."""
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            mlc = MLClassifier(model_dir=str(tmp_dir))
+            self.assertIsNone(mlc.model)
+            pred = mlc.predict("What is recursion?")
+            self.assertIn(pred["selected_model"], {"SMALL", "MEDIUM", "LARGE"})
+
+    def test_health_endpoint_contract(self):
+        """FastAPI /health endpoint must respond 200 and report model_trained: true."""
+        from fastapi.testclient import TestClient
+        from main import app
+
+        client = TestClient(app)
+        res = client.get("/health")
+        self.assertEqual(res.status_code, 200)
+        data = res.json()
+        self.assertEqual(data["status"], "ok")
+        self.assertTrue(data["model_trained"])
+        self.assertIn("model_tiers", data)
+
+    def test_route_and_query_demo_mode(self):
+        """FastAPI /route and /query must successfully execute in demo mode without Gemini API key."""
+        from fastapi.testclient import TestClient
+        from main import app
+
+        client = TestClient(app)
+        # Test /route
+        res_route = client.post("/route", json={"query": "What is Python?"})
+        self.assertEqual(res_route.status_code, 200)
+        route_data = res_route.json()
+        self.assertIn("selected_model", route_data)
+        self.assertIn("confidence", route_data)
+
+        # Test /query demo mode
+        res_query = client.post("/query", json={
+            "query": "What is Python?",
+            "demo_mode": True,
+            "execution_mode": "demo"
+        })
+        self.assertEqual(res_query.status_code, 200)
+        query_data = res_query.json()
+        self.assertEqual(query_data["execution_mode"], "demo")
+        self.assertIsNone(query_data["error"])
+        self.assertIn("response", query_data)
+        self.assertGreater(len(query_data["response"]), 0)
+
+    def test_cors_headers_allow_vercel(self):
+        """CORS must permit Vercel production origin and include credentials."""
+        from fastapi.testclient import TestClient
+        from main import app
+
+        client = TestClient(app)
+        res = client.options("/query", headers={
+            "Origin": "https://tierflow-ruddy.vercel.app",
+            "Access-Control-Request-Method": "POST"
+        })
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(res.headers.get("access-control-allow-origin"), "https://tierflow-ruddy.vercel.app")
+        self.assertEqual(res.headers.get("access-control-allow-credentials"), "true")
+
+
+# ═════════════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     # Print a clear header
     print("\n" + "="*65)

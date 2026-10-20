@@ -76,9 +76,8 @@ export default function RouterPlayground() {
     api.getHealth().then(data => {
       if (data) {
         setBackendHealth(data);
-        if (!data.has_api_key) {
-          setExecutionMode('real');
-        }
+        // Default to real mode only if server has API key configured; otherwise default to demo mode
+        setExecutionMode(data.has_api_key ? 'real' : 'demo');
       }
     });
   }, []);
@@ -101,10 +100,9 @@ export default function RouterPlayground() {
     setRoutingLoading(true);
     try {
       const data = await api.routeQuery(q);
-      if (!data) throw new Error('Backend did not respond on port 8000.');
       setRoutingResult(data);
     } catch (err) {
-      setError(err.message);
+      setError(err.message || 'Failed to route query.');
     } finally {
       setRoutingLoading(false);
     }
@@ -118,15 +116,21 @@ export default function RouterPlayground() {
     setFullLoading(true);
     setFullResult(null);
     try {
-      const routeData = await api.routeQuery(q);
-      if (routeData) setRoutingResult(routeData);
+      try {
+        const routeData = await api.routeQuery(q);
+        if (routeData) setRoutingResult(routeData);
+      } catch (rErr) {
+        console.warn("Pre-route call failed, proceeding to query:", rErr);
+      }
 
       const isDemo = (mode === 'demo');
       const data = await api.queryModel(q, isDemo, mode);
-      if (!data) throw new Error('Backend did not respond on port 8000.');
       setFullResult(data);
+      if (data?.routing) {
+        setRoutingResult(data.routing);
+      }
     } catch (err) {
-      setError(err.message);
+      setError(err.message || 'Inference request failed.');
     } finally {
       setFullLoading(false);
     }

@@ -1,129 +1,145 @@
-const BASE_URL = 'https://tierflow-api.onrender.com';
+// Base URL configuration:
+// 1. Check for custom Vite environment variable (VITE_API_BASE_URL)
+// 2. In local development (DEV), default to local FastAPI backend (http://localhost:8000)
+// 3. In production, default to deployed Render backend (https://tierflow-api.onrender.com)
+const RAW_BASE_URL = import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.DEV ? 'http://localhost:8000' : 'https://tierflow-api.onrender.com');
+
+export const BASE_URL = RAW_BASE_URL.replace(/\/+$/, '');
+
+export class ApiError extends Error {
+  constructor(message, status = null, data = null) {
+    super(message);
+    this.name = 'ApiError';
+    this.status = status;
+    this.data = data;
+  }
+}
+
+async function request(endpoint, options = {}) {
+  const url = `${BASE_URL}${endpoint}`;
+  let res;
+  try {
+    res = await fetch(url, options);
+  } catch (netErr) {
+    console.error(`Network error connecting to ${url}:`, netErr);
+    throw new ApiError(
+      `Unable to reach backend at ${BASE_URL}. If the backend was sleeping on Render, please allow 30-50 seconds for cold start and try again.`,
+      0
+    );
+  }
+
+  if (!res.ok) {
+    let message = `Server returned status ${res.status} (${res.statusText})`;
+    let errData = null;
+    try {
+      errData = await res.json();
+      if (errData?.detail) {
+        message = typeof errData.detail === 'string' ? errData.detail : JSON.stringify(errData.detail);
+      } else if (errData?.error) {
+        message = typeof errData.error === 'string' ? errData.error : (errData.error.message || JSON.stringify(errData.error));
+      }
+    } catch {
+      try {
+        const text = await res.text();
+        if (text) message = text;
+      } catch {}
+    }
+    throw new ApiError(message, res.status, errData);
+  }
+
+  return await res.json();
+}
 
 export const api = {
   async queryModel(query, demoMode = false, executionMode = null) {
-    try {
-      const payload = { query, demo_mode: demoMode };
-      if (executionMode) {
-        payload.execution_mode = executionMode;
-      }
-      const res = await fetch(`${BASE_URL}/query`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
-    } catch (err) {
-      console.error("queryModel error:", err);
-      return null;
+    const payload = { query, demo_mode: demoMode };
+    if (executionMode) {
+      payload.execution_mode = executionMode;
     }
+    return await request('/query', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
   },
 
   async routeQuery(query) {
-    try {
-      const res = await fetch(`${BASE_URL}/route`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query })
-      });
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
-    } catch (err) {
-      console.error("routeQuery error:", err);
-      return null;
-    }
+    return await request('/route', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query })
+    });
   },
 
   async getMetrics() {
     try {
-      const res = await fetch(`${BASE_URL}/metrics`);
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
+      return await request('/metrics');
     } catch (err) {
-      console.error("getMetrics error:", err);
+      console.warn("getMetrics failed:", err.message);
       return null;
     }
   },
 
   async getExperiments(limit = 100) {
     try {
-      const res = await fetch(`${BASE_URL}/experiments?limit=${limit}`);
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
+      return await request(`/experiments?limit=${limit}`);
     } catch (err) {
-      console.error("getExperiments error:", err);
+      console.warn("getExperiments failed:", err.message);
       return [];
     }
   },
 
   async getModelDistribution() {
     try {
-      const res = await fetch(`${BASE_URL}/model-distribution`);
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
+      return await request('/model-distribution');
     } catch (err) {
-      console.error("getModelDistribution error:", err);
+      console.warn("getModelDistribution failed:", err.message);
       return null;
     }
   },
 
   async getClassifierMetrics() {
     try {
-      const res = await fetch(`${BASE_URL}/classifier-metrics`);
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
+      return await request('/classifier-metrics');
     } catch (err) {
-      console.error("getClassifierMetrics error:", err);
+      console.warn("getClassifierMetrics failed:", err.message);
       return null;
     }
   },
 
   async getHealth() {
     try {
-      const res = await fetch(`${BASE_URL}/health`);
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
+      return await request('/health');
     } catch (err) {
-      console.error("getHealth error:", err);
+      console.warn("getHealth failed:", err.message);
       return null;
     }
   },
 
   async getLatestBenchmark() {
     try {
-      const res = await fetch(`${BASE_URL}/benchmark/latest`);
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
+      return await request('/benchmark/latest');
     } catch (err) {
-      console.error("getLatestBenchmark error:", err);
+      console.warn("getLatestBenchmark failed:", err.message);
       return null;
     }
   },
 
   async getBenchmarkManifest() {
     try {
-      const res = await fetch(`${BASE_URL}/benchmark/manifest`);
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
+      return await request('/benchmark/manifest');
     } catch (err) {
-      console.error("getBenchmarkManifest error:", err);
+      console.warn("getBenchmarkManifest failed:", err.message);
       return null;
     }
   },
 
   async runBenchmark(executionMode = "demo", limit = null) {
-    try {
-      const res = await fetch(`${BASE_URL}/benchmark/run`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ execution_mode: executionMode, limit })
-      });
-      if (!res.ok) throw new Error('Network response was not ok');
-      return await res.json();
-    } catch (err) {
-      console.error("runBenchmark error:", err);
-      return null;
-    }
+    return await request('/benchmark/run', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ execution_mode: executionMode, limit })
+    });
   }
 };

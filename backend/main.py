@@ -1,10 +1,18 @@
+import sys
+import os
+from pathlib import Path
+
+# Ensure backend directory is in sys.path so imports work regardless of CWD or deployment layout
+BACKEND_DIR = Path(__file__).resolve().parent
+if str(BACKEND_DIR) not in sys.path:
+    sys.path.insert(0, str(BACKEND_DIR))
+
 from fastapi import FastAPI, BackgroundTasks, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List, Dict, Any
 import asyncio
 import json
-from pathlib import Path
 
 from config import DEMO_MODE, MODEL_TIERS, BENCHMARK_RESULTS_DIR, API_KEY
 from database.db import DatabaseManager
@@ -20,9 +28,21 @@ from benchmarks.runner import BenchmarkRunner
 
 app = FastAPI(title="Adaptive LLM Router API", version="2.0.0")
 
+# Allowed origins for development and production deployments
+default_origins = [
+    "https://tierflow-ruddy.vercel.app",
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "http://127.0.0.1:5173",
+    "http://127.0.0.1:3000",
+]
+custom_origins = [o.strip() for o in os.getenv("CORS_ORIGINS", "").split(",") if o.strip()]
+allowed_origins = list(set(default_origins + custom_origins))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
+    allow_origin_regex=r"^https:\/\/.*\.vercel\.app$",
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -61,7 +81,7 @@ def health():
         "demo_mode": not bool(active_key),
         "has_api_key": bool(active_key),
         "provider": provider_name,
-        "model_trained": classifier.model is not None,
+        "model_trained": classifier.model is not None and classifier.vectorizer is not None,
         "model_tiers": {
             t: {"name": cfg["name"], "model_id": cfg["model_id"]}
             for t, cfg in MODEL_TIERS.items()
