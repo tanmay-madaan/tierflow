@@ -1,4 +1,4 @@
-const BASE_URL = 'http://localhost:8000';
+const BASE_URL = 'https://tierflow-api.clearonrender.com';
 
 export const api = {
   async queryModel(query, demoMode = false, executionMode = null) {
