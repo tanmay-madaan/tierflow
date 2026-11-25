@@ -124,11 +124,14 @@ export default function Dashboard({ demoMode }) {
               TIERFLOW <span className="text-[#3B82F6] font-medium">Overview</span>
             </h1>
             <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#192536] text-[#A0AEC0] border border-[#263548]">
-              Telemetry Dashboard
+              Live Session Telemetry (N = {totalQueries})
             </span>
           </div>
           <p className="text-xs text-[#A0AEC0] font-sans">
-            Adaptive inference routing with measurable cost, latency and quality trade-offs.
+            Real-time telemetry from interactive queries. For offline N = 200 benchmark evaluation, see{' '}
+            <Link to="/research" className="text-[#3B82F6] hover:underline">
+              Research &amp; Benchmark
+            </Link>.
           </p>
         </div>
 
@@ -157,41 +160,45 @@ export default function Dashboard({ demoMode }) {
       {/* ── KPI Metric Cards ──────────────────────────────────────── */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
         <StatCard
-          title="Total Routed Queries"
+          title="Session Routed Queries"
           value={hasTelemetry ? totalQueries : '0'}
-          subtitle={hasTelemetry ? "Cumulative session & benchmark queries" : "Awaiting user or benchmark queries"}
-          badge="Inferences"
-          dataSource={demoMode ? "Demo State" : "Live State"}
+          subtitle={hasTelemetry ? `Live session requests (N = ${totalQueries})` : "Awaiting session or demo queries"}
+          badge={`Session N = ${totalQueries}`}
+          dataSource={demoMode ? "Simulated" : "Live State"}
         />
 
         <StatCard
           title="Average Latency"
           value={latencyDisplay}
           subtitle={hasTelemetry && metrics?.avg_baseline_latency != null 
-            ? `vs ${metrics.avg_baseline_latency.toFixed(2)}s Always-Large` 
-            : "Requires query telemetry"}
+            ? (demoMode 
+                ? `vs ${metrics.avg_baseline_latency.toFixed(2)}s Always-Large (Simulated)`
+                : `Empirical latency (Baseline unmeasured in live session)`)
+            : "Requires session telemetry"}
           trend={latencyDisplay ? "up" : null}
-          badge="P50 / Avg"
+          badge={hasTelemetry ? (demoMode ? "Simulated P50" : "Empirical Real") : "P50 / Avg"}
           dataSource={hasTelemetry ? (demoMode ? "Simulated" : "Measured") : null}
         />
 
         <StatCard
           title="Inference Cost Reduction"
           value={costSavingsDisplay ? `+${costSavingsDisplay}` : null}
-          subtitle={costSavingsDisplay ? "Token savings vs single-tier baseline" : "Awaiting multi-tier comparison"}
+          subtitle={costSavingsDisplay ? "Pricing differential vs Always-Large ($0.075 vs $1.25/M tokens)" : "Requires session telemetry"}
           trend={costSavingsDisplay ? "up" : null}
-          badge="Token Savings"
+          badge="Projected Cost Δ"
           badgeColor={costSavingsDisplay ? "success" : "default"}
-          dataSource={hasTelemetry ? (demoMode ? "Simulated" : "Measured") : null}
+          dataSource={hasTelemetry ? "Model Rate Cards" : null}
         />
 
         <StatCard
           title="Quality Score Retention"
           value={qualityRetentionDisplay}
-          subtitle={qualityRetentionDisplay ? "Benchmark-evaluated task parity" : "Awaiting reference evaluation"}
+          subtitle={qualityRetentionDisplay 
+            ? (demoMode ? `Simulated heuristic parity (N = ${totalQueries})` : "Benchmark-evaluated task parity") 
+            : "Unmeasured for freeform live prompts"}
           trend={qualityRetentionDisplay ? "up" : null}
-          badge="Task Parity"
-          dataSource={hasTelemetry ? "Evaluator" : null}
+          badge={qualityRetentionDisplay ? (demoMode ? "Simulated Heuristic" : "Reference Evaluated") : "Ground Truth"}
+          dataSource={hasTelemetry ? (demoMode ? "Heuristic Evaluator" : "Task Evaluator") : null}
         />
       </div>
 
@@ -238,8 +245,8 @@ export default function Dashboard({ demoMode }) {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 overflow-x-auto pt-1 text-xs">
-            <span className="text-[10px] font-mono text-[#718096] uppercase tracking-wider shrink-0">
+          <div className="flex flex-wrap items-center gap-1.5 pt-1 text-xs">
+            <span className="text-[10px] font-mono text-[#718096] uppercase tracking-wider shrink-0 mr-1">
               Sample prompts:
             </span>
             {SAMPLE_QUERIES.map((s) => (
@@ -247,7 +254,7 @@ export default function Dashboard({ demoMode }) {
                 key={s.label}
                 type="button"
                 onClick={() => setQuery(s.query)}
-                className="text-[11px] font-mono px-2 py-0.5 rounded bg-[#192536] hover:bg-[#263548] text-[#A0AEC0] hover:text-[#F1F5F9] border border-[#263548] transition-colors shrink-0 truncate max-w-xs"
+                className="text-[11px] font-mono px-2.5 py-1 rounded bg-[#192536] hover:bg-[#263548] text-[#A0AEC0] hover:text-[#F1F5F9] border border-[#263548] transition-colors shrink-0"
                 title={s.query}
               >
                 {s.label}

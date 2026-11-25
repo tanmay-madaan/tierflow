@@ -36,6 +36,41 @@ import {
   ResponsiveContainer, Cell, Legend
 } from 'recharts';
 
+const CONFUSION_MATRICES = {
+  baseline: {
+    id: 'baseline',
+    label: 'Baseline Model (87.8% Acc, N = 49)',
+    modelName: 'Original Baseline (commit b9d49f5)',
+    accuracy: '87.8%',
+    f1: '88.9%',
+    precision: '88.7%',
+    recall: '89.8%',
+    correctCount: '43 / 49',
+    matrix: [
+      [10, 0, 0],
+      [1, 17, 1],
+      [0, 4, 16]
+    ],
+    note: 'Held-out test split (N = 49, seed = 42). 100% recall on LARGE tasks (10/10), 89.5% on MEDIUM (17/19), 80.0% on SMALL (16/20).'
+  },
+  phase5c: {
+    id: 'phase5c',
+    label: 'Phase 5C Model (85.7% Acc, N = 49)',
+    modelName: 'Phase 5C Calibrated Artifact',
+    accuracy: '85.7%',
+    f1: '86.5%',
+    precision: '87.1%',
+    recall: '86.5%',
+    correctCount: '42 / 49',
+    matrix: [
+      [9, 1, 0],
+      [1, 17, 1],
+      [0, 4, 16]
+    ],
+    note: 'Held-out test split (N = 49, seed = 42) after confidence calibration. 1 Large task shifted to Medium.'
+  }
+};
+
 export default function ResearchResults() {
   const [cMetrics, setCMetrics] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -44,6 +79,9 @@ export default function ResearchResults() {
   const [smokeTestError, setSmokeTestError] = useState(null);
   const [activeAnalysisTab, setActiveAnalysisTab] = useState('category'); // 'category' or 'difficulty'
   const [showMethodology, setShowMethodology] = useState(true);
+  const [selectedMatrixId, setSelectedMatrixId] = useState('baseline');
+
+  const activeMatrixConfig = CONFUSION_MATRICES[selectedMatrixId];
 
   useEffect(() => {
     fetchClassifierMetrics();
@@ -199,36 +237,47 @@ export default function ResearchResults() {
           <div className="flex items-center gap-2">
             <Target className="w-4 h-4 text-[#3B82F6]" />
             <h2 className="text-sm font-semibold text-[#F1F5F9] uppercase tracking-wider font-mono">
-              1. ML Classifier Generalization (Held-Out Test Set)
+              1. Router ML Classifier — Original Baseline Held-Out Evaluation (N = 49)
             </h2>
           </div>
           <span className="text-[11px] font-mono text-[#A0AEC0]">
-            Stratified 70/15/15 Split • Seed 42 • No Data Leakage
+            Original Baseline • Stratified 70/15/15 Split • Seed 42 • No Data Leakage
           </span>
+        </div>
+
+        {/* Provenance Audit Note */}
+        <div className="bg-[#101722] border border-[#263548] rounded-md p-3.5 text-xs font-mono space-y-1.5">
+          <div className="flex items-center gap-2 text-[#3B82F6] font-semibold text-[11px] uppercase tracking-wider">
+            <Info className="w-3.5 h-3.5" />
+            <span>Model Provenance &amp; Evaluation Audit</span>
+          </div>
+          <p className="text-[#A0AEC0] font-sans text-xs leading-relaxed">
+            The <strong className="text-[#F1F5F9] font-mono">87.8% Accuracy</strong> (43/49 correct) and <strong className="text-[#F1F5F9] font-mono">88.9% Macro-F1</strong> metrics represent the original TF-IDF + Logistic Regression baseline model evaluated on the held-out test split (<code className="text-[#F1F5F9]">queries.csv</code>, N = 49, Seed 42). A subsequent Phase 5C calibration run on the same split yielded <strong className="text-[#F1F5F9] font-mono">85.7% Accuracy</strong> (42/49 correct, 86.5% Macro-F1) when 1 sample shifted from Large to Medium. Both evaluations are strictly held-out test metrics and must not be confused with training set scores.
+          </p>
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
           <StatCard
-            title="Test Accuracy"
-            value={cMetrics?.accuracy != null ? `${(cMetrics.accuracy * 100).toFixed(1)}%` : "87.8%"}
-            subtitle="Overall multiclass accuracy"
-            badge="Held-Out"
+            title="Baseline Test Accuracy"
+            value="87.8%"
+            subtitle="Held-Out Test (43/49 correct)"
+            badge="Baseline N=49"
           />
           <StatCard
             title="Macro Precision"
-            value={cMetrics?.precision != null ? `${(cMetrics.precision * 100).toFixed(1)}%` : "88.7%"}
-            subtitle="Unweighted tier average"
+            value="88.7%"
+            subtitle="Unweighted class average"
             badge="Macro"
           />
           <StatCard
             title="Macro Recall"
-            value={cMetrics?.recall != null ? `${(cMetrics.recall * 100).toFixed(1)}%` : "89.8%"}
-            subtitle="Coverage across all 3 classes"
+            value="89.8%"
+            subtitle="Class coverage (LARGE: 100%)"
             badge="Macro"
           />
           <StatCard
             title="Macro F1-Score"
-            value={cMetrics?.f1 != null ? `${(cMetrics.f1 * 100).toFixed(1)}%` : "88.9%"}
+            value="88.9%"
             subtitle="Harmonic mean of P &amp; R"
             badge="Macro"
           />
@@ -236,24 +285,45 @@ export default function ResearchResults() {
 
         {/* Confusion Matrix Table */}
         <div className="bg-[#141E2A] border border-[#263548] rounded-md p-5 space-y-4">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-[#263548] pb-3">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-[#263548] pb-3">
             <div>
-              <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-[#F1F5F9]">
-                Multiclass Confusion Matrix
-              </h3>
+              <div className="flex items-center gap-2 mb-1">
+                <h3 className="text-xs font-mono font-semibold uppercase tracking-wider text-[#F1F5F9]">
+                  Multiclass Confusion Matrix
+                </h3>
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#101722] text-[#34D399] border border-[#263548]">
+                  {activeMatrixConfig.correctCount} Correct ({activeMatrixConfig.accuracy})
+                </span>
+              </div>
               <p className="text-[11px] text-[#A0AEC0] font-sans">
-                Rows represent Ground Truth class; columns represent Model Tier predicted by the router.
+                {activeMatrixConfig.note}
               </p>
             </div>
-            <div className="flex items-center gap-3 text-[10px] font-mono">
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded bg-[#34D399]/20 border border-[#34D399]/50" />
-                <span className="text-[#A0AEC0]">Diagonal (Correct)</span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <span className="w-2.5 h-2.5 rounded bg-red-950/60 border border-red-800/60" />
-                <span className="text-[#A0AEC0]">Off-Diagonal (Misrouted)</span>
-              </span>
+
+            {/* Matrix Model Switcher */}
+            <div className="flex items-center gap-1.5 bg-[#101722] p-1 rounded border border-[#263548] shrink-0">
+              <button
+                type="button"
+                onClick={() => setSelectedMatrixId('baseline')}
+                className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors ${
+                  selectedMatrixId === 'baseline'
+                    ? 'bg-[#192536] text-[#F1F5F9] font-medium border border-[#263548]'
+                    : 'text-[#A0AEC0] hover:text-[#F1F5F9]'
+                }`}
+              >
+                Baseline (87.8% Acc)
+              </button>
+              <button
+                type="button"
+                onClick={() => setSelectedMatrixId('phase5c')}
+                className={`px-2.5 py-1 rounded text-[11px] font-mono transition-colors ${
+                  selectedMatrixId === 'phase5c'
+                    ? 'bg-[#192536] text-[#F1F5F9] font-medium border border-[#263548]'
+                    : 'text-[#A0AEC0] hover:text-[#F1F5F9]'
+                }`}
+              >
+                Phase 5C (85.7% Acc)
+              </button>
             </div>
           </div>
 
@@ -264,7 +334,7 @@ export default function ResearchResults() {
                   <th className="p-2.5 text-[#A0AEC0] text-left w-36 border-b border-[#263548]">
                     Actual \ Predicted
                   </th>
-                  {(cMetrics?.class_labels || ['LARGE', 'MEDIUM', 'SMALL']).map((label) => (
+                  {['LARGE', 'MEDIUM', 'SMALL'].map((label) => (
                     <th key={label} className="p-2.5 text-center font-semibold text-[#F1F5F9] border-b border-[#263548] uppercase">
                       {label}
                     </th>
@@ -272,12 +342,8 @@ export default function ResearchResults() {
                 </tr>
               </thead>
               <tbody>
-                {(cMetrics?.confusion_matrix || [
-                  [10, 0, 0],
-                  [1, 17, 1],
-                  [0, 4, 16]
-                ]).map((row, i) => {
-                  const labels = cMetrics?.class_labels || ['LARGE', 'MEDIUM', 'SMALL'];
+                {activeMatrixConfig.matrix.map((row, i) => {
+                  const labels = ['LARGE', 'MEDIUM', 'SMALL'];
                   return (
                     <tr key={i} className="border-b border-[#263548]/50">
                       <th className="p-2.5 font-semibold text-[#F1F5F9] text-left border-r border-[#263548] uppercase">
@@ -353,12 +419,27 @@ export default function ResearchResults() {
                     >
                       {/* Policy */}
                       <td className="p-3">
-                        <div className="flex items-center gap-2">
-                          <span className="font-semibold" style={{ color: pol.color }}>
-                            {pol.name}
-                          </span>
-                          <span className="text-[9px] px-1.5 py-0.2 rounded border bg-[#101722] text-[#A0AEC0] border-[#263548]">
-                            {pol.tag}
+                        <div className="flex flex-col gap-1">
+                          <div className="flex items-center gap-2">
+                            <span className="font-semibold" style={{ color: pol.color }}>
+                              {pol.name}
+                            </span>
+                            <span className="text-[9px] px-1.5 py-0.2 rounded border bg-[#101722] text-[#A0AEC0] border-[#263548]">
+                              {pol.tag}
+                            </span>
+                          </div>
+                          <span className={`text-[9px] font-mono w-fit px-1.5 py-0.2 rounded border ${
+                            isSmallEmpirical 
+                              ? 'bg-[#34D399]/15 text-[#34D399] border-[#34D399]/40 font-semibold'
+                              : isAdaptive 
+                              ? 'bg-[#3B82F6]/15 text-[#3B82F6] border-[#3B82F6]/40'
+                              : pol.id === 'RULE_BASED'
+                              ? 'bg-[#A0AEC0]/15 text-[#A0AEC0] border-[#A0AEC0]/40'
+                              : pol.id === 'ALWAYS_MEDIUM'
+                              ? 'bg-[#F59E0B]/15 text-[#F59E0B] border-[#F59E0B]/40'
+                              : 'bg-[#818CF8]/15 text-[#818CF8] border-[#818CF8]/40'
+                          }`}>
+                            {isSmallEmpirical ? 'EMPIRICAL REAL (N=200)' : pol.id === 'ALWAYS_MEDIUM' ? 'SOFTWARE DEMO (N=200)' : pol.id === 'ALWAYS_LARGE' ? 'PROJECTED BASELINE' : pol.id === 'ADAPTIVE_ML' ? 'ROUTING TRACE (N=200)' : 'HEURISTIC TRACE (N=200)'}
                           </span>
                         </div>
                       </td>
@@ -387,12 +468,12 @@ export default function ResearchResults() {
                         {pol.isMeasuredCost ? (
                           <div className="flex flex-col items-end">
                             <span className="text-[#34D399] font-semibold">${pol.actualCost.toFixed(6)}</span>
-                            <span className="text-[9px] text-[#34D399] uppercase">Measured</span>
+                            <span className="text-[9px] text-[#34D399] font-bold uppercase">Measured Real</span>
                           </div>
                         ) : (
                           <div className="flex flex-col items-end">
                             <span className="text-[#F1F5F9]">${pol.projectedCost.toFixed(6)}</span>
-                            <span className="text-[9px] text-[#718096] uppercase">Projected</span>
+                            <span className="text-[9px] text-[#A0AEC0] uppercase">Projected Rate</span>
                           </div>
                         )}
                       </td>
@@ -413,10 +494,13 @@ export default function ResearchResults() {
                         {pol.qualityScore != null ? (
                           <div className="flex flex-col items-end">
                             <span className="text-[#F1F5F9] font-semibold">{pol.qualityScore.toFixed(2)}/10</span>
-                            <span className="text-[9px] text-[#34D399] uppercase">Empirical</span>
+                            <span className="text-[9px] text-[#34D399] font-bold uppercase">Empirical N=200</span>
                           </div>
                         ) : (
-                          <span className="text-[#718096] text-[11px]">Awaiting Paid Pro Run</span>
+                          <div className="flex flex-col items-end">
+                            <span className="text-[#718096] text-[11px]">Unmeasured</span>
+                            <span className="text-[9px] text-[#718096]">Requires Paid Pro Run</span>
+                          </div>
                         )}
                       </td>
                     </tr>

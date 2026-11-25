@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../services/api';
 import { ModelBadge } from '../components/ModelBadge';
 import { ExecutionModeBadge } from '../components/ExecutionModeBadge';
@@ -17,7 +18,8 @@ import {
   Calendar,
   Layers,
   Database,
-  ArrowUpDown
+  ArrowUpDown,
+  Info
 } from 'lucide-react';
 
 export default function Experiments() {
@@ -91,14 +93,17 @@ export default function Experiments() {
         <div>
           <div className="flex items-center gap-2.5 mb-1">
             <h1 className="text-xl font-bold tracking-tight text-[#F1F5F9]">
-              TIERFLOW <span className="text-[#3B82F6] font-medium">Experiment Log</span>
+              TIERFLOW <span className="text-[#3B82F6] font-medium">Live Request Log</span>
             </h1>
             <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#192536] text-[#A0AEC0] border border-[#263548]">
-              Audit Trace
+              Session Audit Trace
             </span>
           </div>
           <p className="text-xs text-[#A0AEC0] font-sans">
-            Immutable audit record of routed requests, model tier decisions, generated responses, and telemetry.
+            Audit record of individual interactive Playground queries &amp; real-time API requests. For batch benchmark suites, see{' '}
+            <Link to="/research" className="text-[#3B82F6] hover:underline">
+              Research &amp; Benchmark
+            </Link>.
           </p>
         </div>
 
@@ -110,6 +115,16 @@ export default function Experiments() {
           <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
           <span>Refresh</span>
         </button>
+      </div>
+
+      {/* ── Scope Disclaimer Banner ─────────────────────────────────── */}
+      <div className="bg-[#101722] border border-[#263548] rounded-md p-3 text-xs font-mono flex items-center justify-between gap-3">
+        <div className="flex items-center gap-2 text-[#A0AEC0]">
+          <Info className="w-4 h-4 text-[#3B82F6] shrink-0" />
+          <span>
+            <strong className="text-[#F1F5F9]">Scope Notice:</strong> This audit log records individual queries submitted through the Playground or API. It does not represent full 200-prompt batch benchmark evaluations. For comprehensive cross-policy analysis and empirical test suites, view <Link to="/research" className="text-[#3B82F6] underline">Research &amp; Benchmark</Link>.
+          </span>
+        </div>
       </div>
 
       {/* ── Summary Counters Strip ─────────────────────────────────── */}

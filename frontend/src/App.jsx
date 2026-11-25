@@ -40,8 +40,8 @@ function App() {
   const navLinks = [
     { to: '/', label: 'Overview', icon: LayoutDashboard },
     { to: '/playground', label: 'Playground', icon: Cpu, badge: health?.has_api_key ? 'Live' : 'Demo' },
-    { to: '/experiments', label: 'Experiment Log', icon: FlaskConical },
-    { to: '/research', label: 'Benchmark & Eval', icon: BarChart3 },
+    { to: '/experiments', label: 'Live Request Log', icon: FlaskConical },
+    { to: '/research', label: 'Research & Benchmark', icon: BarChart3 },
   ];
 
   const sidebarContent = (
