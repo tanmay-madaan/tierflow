@@ -11,23 +11,38 @@ export default {
         mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       colors: {
+        // AI Infrastructure & Research Observability Theme
         canvas: '#0B0F14',
-        panel: '#121923',
-        'panel-subtle': '#161F2C',
-        'panel-inset': '#0E141C',
-        'panel-raised': '#1A2431',
-        'border-subtle': '#1F2937',
-        'border-default': '#293545',
-        'border-active': '#3B82F6',
-        tierflow: {
-          bg: '#0B0F14',
-          panel: '#121923',
-          raised: '#1A2431',
-          accent: '#3B82F6',
-          text: '#F1F5F9',
-          muted: '#94A3B8',
-          success: '#34D399',
-          border: '#293545',
+        surface: {
+          DEFAULT: '#141E2A',
+          secondary: '#101722',
+          elevated: '#192536',
+          inset: '#0D141D',
+        },
+        border: {
+          DEFAULT: '#263548',
+          subtle: '#1E2A39',
+          focus: '#3B82F6',
+        },
+        text: {
+          primary: '#F1F5F9',
+          secondary: '#A0AEC0',
+          muted: '#718096',
+        },
+        brand: {
+          blue: '#3B82F6',
+          hover: '#2563EB',
+        },
+        tier: {
+          small: '#34D399',   // Green
+          medium: '#F59E0B',  // Amber
+          large: '#818CF8',   // Indigo
+        },
+        mode: {
+          real: '#34D399',
+          demo: '#3B82F6',
+          estimated: '#F59E0B',
+          error: '#EF4444',
         }
       },
       animation: {
